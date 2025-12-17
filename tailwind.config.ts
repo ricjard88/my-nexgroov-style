@@ -94,6 +94,10 @@ export default {
           from: { width: "0%" },
           to: { width: "100%" },
         },
+        "blink": {
+          "0%, 50%": { opacity: "1" },
+          "51%, 100%": { opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,6 +106,7 @@ export default {
         "fade-in-slow": "fade-in-slow 0.8s ease-out forwards",
         "slide-up": "slide-up 0.6s ease-out forwards",
         "grow-width": "grow-width 0.8s ease-out forwards",
+        "blink": "blink 1s step-end infinite",
       },
     },
   },
