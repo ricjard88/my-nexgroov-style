@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <div>
             <p className="text-sm text-foreground font-serif">
-              Independent Operator
+              Operator
             </p>
             <p className="text-sm text-muted-foreground font-sans">
               Special Situations
@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground font-sans">
               Operating through Graystone Industries
             </p>
-            <img src={logo} alt="Graystone Industries" className="h-5 w-5 opacity-70 dark:invert" />
+            <img src={logo} alt="Graystone Industries" className="h-5 w-5 opacity-70" />
           </div>
         </div>
       </div>
