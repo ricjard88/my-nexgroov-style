@@ -1,40 +1,24 @@
-import { Button } from "@/components/ui/button";
-
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center pt-16">
       <div className="container max-w-5xl mx-auto px-6 py-20">
         <div className="max-w-3xl">
           <h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight tracking-tight opacity-0 animate-fade-in"
+            className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif leading-tight tracking-tight opacity-0 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
           >
-            Crafting digital experiences that{" "}
-            <em className="not-italic font-serif italic text-foreground/90">
-              resonate with purpose.
+            I work with organizations that already exist, but{" "}
+            <em className="font-serif italic">
+              don't function the way they know they could.
             </em>
           </h1>
           
           <p 
-            className="mt-8 text-lg md:text-xl text-muted-foreground font-sans leading-relaxed max-w-2xl opacity-0 animate-fade-in"
+            className="mt-8 text-lg text-muted-foreground font-sans leading-relaxed max-w-2xl opacity-0 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            I'm a designer and developer focused on building thoughtful products. 
-            Clean aesthetics. Intentional interactions. Meaningful results.
+            When priorities blur, teams drift, and execution breaks down, I restore or create order through operational resolution.
           </p>
-          
-          <div 
-            className="mt-10 opacity-0 animate-fade-in"
-            style={{ animationDelay: "0.5s" }}
-          >
-            <Button 
-              variant="hero" 
-              size="lg"
-              onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              View my work
-            </Button>
-          </div>
         </div>
       </div>
     </section>
