@@ -1,8 +1,8 @@
 const Methodology = () => {
   return (
-    <section id="methodology" className="py-10">
+    <section id="methodology" className="py-6">
       <div className="container max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-3">
+        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-2">
           Methodology
         </h2>
         
