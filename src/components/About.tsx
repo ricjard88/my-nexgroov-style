@@ -5,14 +5,14 @@ const About = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-8 bg-muted/30">
+    <section id="about" className="py-6 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
         <div 
           ref={ref}
           className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
         >
           <Card className="border border-border/30 bg-card card-hover">
-            <CardContent className="p-6 md:p-8">
+            <CardContent className="p-5 md:p-6">
               <h3 className="text-xl md:text-2xl font-serif font-medium text-foreground">
                 Where I'm Useful
               </h3>
