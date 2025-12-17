@@ -4,7 +4,7 @@ const Methodology = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="methodology" className="py-10">
+    <section id="methodology" className="py-8">
       <div className="container max-w-5xl mx-auto px-6">
         <div 
           ref={ref}

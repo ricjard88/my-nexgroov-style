@@ -5,7 +5,7 @@ const Conditions = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="conditions" className="py-10 bg-muted/30">
+    <section id="conditions" className="py-8 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
         <div 
           ref={ref}
