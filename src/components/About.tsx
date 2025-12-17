@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-muted/30">
+    <section id="about" className="py-16 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
         <Card className="border border-border bg-card shadow-sm">
           <CardContent className="p-8 md:p-12">
