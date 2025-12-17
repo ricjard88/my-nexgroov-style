@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center pt-16">
-      <div className="container max-w-5xl mx-auto px-6 py-20">
+    <section className="min-h-[70vh] flex items-center pt-16">
+      <div className="container max-w-5xl mx-auto px-6 py-12">
         <div className="max-w-3xl">
           <h1 
             className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif leading-tight tracking-tight opacity-0 animate-fade-in"

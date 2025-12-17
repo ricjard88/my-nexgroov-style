@@ -2,9 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Conditions = () => {
   return (
-    <section id="conditions" className="py-24 bg-muted/30">
+    <section id="conditions" className="py-16 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-8">
+        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-4">
           Qualifying Conditions
         </h2>
         
