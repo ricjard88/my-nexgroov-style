@@ -2,14 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Conditions = () => {
   return (
-    <section id="conditions" className="py-16 bg-muted/30">
+    <section id="conditions" className="py-10 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
-        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-4">
+        <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-3">
           Qualifying Conditions
         </h2>
         
-        <Card className="border border-border bg-card shadow-sm">
-          <CardContent className="p-8 md:p-12">
+        <Card className="border border-border/40 bg-card">
+          <CardContent className="p-6 md:p-8">
             <ul className="space-y-4 text-muted-foreground font-sans">
               <li className="flex items-start gap-3">
                 <span className="text-foreground mt-1">—</span>
