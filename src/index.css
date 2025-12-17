@@ -51,8 +51,8 @@
     --font-serif: "Playfair Display", Georgia, serif;
     --font-sans: "Source Sans Pro", system-ui, sans-serif;
 
-    /* Custom accent color - warm coral/red for highlights */
-    --accent-warm: 4 80% 60%;
+    /* Custom accent color - faded royal lavender for highlights */
+    --accent-warm: 270 30% 45%;
     --accent-warm-foreground: 0 0% 100%;
 
     --sidebar-background: 0 0% 98%;
