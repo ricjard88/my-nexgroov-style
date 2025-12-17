@@ -1,6 +1,6 @@
 const Methodology = () => {
   return (
-    <section id="methodology" className="py-6">
+    <section id="methodology" className="py-10">
       <div className="container max-w-5xl mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-2">
           Methodology
