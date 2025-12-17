@@ -22,20 +22,12 @@ const Hero = () => {
     }
   }, [displayedText]);
 
-  // Split text to apply italic styling to the second part
-  const splitIndex = "I identify & fix bottlenecks ".length;
-  const firstPart = displayedText.slice(0, splitIndex);
-  const secondPart = displayedText.slice(splitIndex);
-
   return (
     <section className="min-h-[65vh] flex items-center justify-center">
       <div className="container max-w-5xl mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif leading-tight tracking-tight">
-            {firstPart}
-            {secondPart && (
-              <em className="font-serif italic">{secondPart}</em>
-            )}
+            {displayedText}
             {showCursor && (
               <span 
                 className={`inline-block w-[2px] h-[1em] bg-foreground ml-1 align-middle ${
