@@ -19,6 +19,14 @@ const Hero = () => {
           >
             When priorities blur, teams drift, and execution breaks down, I restore or create order through operational resolution.
           </p>
+
+          {/* Animated accent line */}
+          <div 
+            className="mt-6 h-0.5 bg-accent-warm opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.5s" }}
+          >
+            <div className="h-full bg-accent-warm w-0 animate-grow-width" style={{ animationDelay: "0.7s" }} />
+          </div>
         </div>
       </div>
     </section>
