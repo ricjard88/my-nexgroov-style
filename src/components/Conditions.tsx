@@ -5,7 +5,7 @@ const Conditions = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="conditions" className="py-8 bg-muted/30">
+    <section id="conditions" className="py-6 bg-muted/30">
       <div className="container max-w-5xl mx-auto px-6">
         <div 
           ref={ref}
@@ -16,7 +16,7 @@ const Conditions = () => {
           </h2>
           
           <Card className="border border-border/30 bg-card card-hover">
-            <CardContent className="p-6 md:p-8">
+            <CardContent className="p-5 md:p-6">
               <ul className="space-y-4 text-muted-foreground font-sans">
                 <li className={`flex items-start gap-3 scroll-hidden stagger-1 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>

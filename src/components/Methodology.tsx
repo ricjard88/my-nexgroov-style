@@ -4,7 +4,7 @@ const Methodology = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="methodology" className="py-8">
+    <section id="methodology" className="py-6">
       <div className="container max-w-5xl mx-auto px-6">
         <div 
           ref={ref}
@@ -26,7 +26,7 @@ const Methodology = () => {
               Success criteria is <span className="text-foreground">defined in advance</span>.
             </p>
 
-            <div className="pt-4 border-t border-border/40">
+            <div className="pt-3 border-t border-border/40">
               <p className="text-muted-foreground font-sans leading-relaxed">
                 I remain until the system can run without me.
                 Sometimes it's 90 days. Sometimes it's a year.
