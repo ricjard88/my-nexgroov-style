@@ -7,10 +7,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <div>
             <p className="text-sm text-foreground font-serif">
-              Operator
+              Strategic Operator
             </p>
             <p className="text-sm text-muted-foreground font-sans">
-              Special Situations
+              Hard Problems
             </p>
           </div>
           
