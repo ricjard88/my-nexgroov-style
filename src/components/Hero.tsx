@@ -10,7 +10,7 @@ const Hero = () => {
     if (displayedText.length < fullText.length) {
       const timeout = setTimeout(() => {
         setDisplayedText(fullText.slice(0, displayedText.length + 1));
-      }, 45);
+      }, 60);
       return () => clearTimeout(timeout);
     } else {
       // Typing complete - fade out cursor after a moment
@@ -28,7 +28,7 @@ const Hero = () => {
   const secondPart = displayedText.slice(splitIndex);
 
   return (
-    <section className="min-h-[75vh] flex items-center justify-center">
+    <section className="min-h-[65vh] flex items-center justify-center">
       <div className="container max-w-5xl mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif leading-tight tracking-tight">
