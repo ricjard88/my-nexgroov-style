@@ -24,18 +24,18 @@ const Header = () => {
           <Link to="/methodology">
             <Button variant="nav">Methodology</Button>
           </Link>
+          {isHomePage && (
+            <Button variant="nav" onClick={() => scrollToSection("conditions")}>
+              Conditions
+            </Button>
+          )}
           <Link to="/blog">
             <Button variant="nav">Blog</Button>
           </Link>
           {isHomePage && (
-            <>
-              <Button variant="nav" onClick={() => scrollToSection("conditions")}>
-                Conditions
-              </Button>
-              <Button variant="nav" onClick={() => scrollToSection("contact")}>
-                Contact
-              </Button>
-            </>
+            <Button variant="nav" onClick={() => scrollToSection("contact")}>
+              Contact
+            </Button>
           )}
         </nav>
 
