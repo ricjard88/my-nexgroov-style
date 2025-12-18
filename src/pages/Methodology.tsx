@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const MethodologyPage = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -10,6 +12,14 @@ const MethodologyPage = () => {
       <Header />
       <main className="pt-24 pb-12">
         <div className="container max-w-5xl mx-auto px-6">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="font-sans text-sm">Back</span>
+          </Link>
+          
           <div 
             ref={ref}
             className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
