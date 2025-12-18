@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const fullText = "I identify & fix bottlenecks for organizations to operate at their highest capacity.";
+  const fullText = "I identify & remove bottlenecks for organizations to operate at their highest capacity.";
   const [displayedText, setDisplayedText] = useState("");
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
