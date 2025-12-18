@@ -11,28 +11,32 @@ const About = () => {
           ref={ref}
           className={`scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
         >
+          <h2 className="text-2xl md:text-3xl font-serif font-medium text-foreground mb-2">
+            Operating Conditions
+          </h2>
+          
           <Card className="border border-border/30 bg-card card-hover">
             <CardContent className="p-5 md:p-6">
-              <h3 className="text-xl md:text-2xl font-serif font-medium text-foreground">
-                Operating Conditions
-              </h3>
-              
-              <p className="mt-4 text-muted-foreground font-sans leading-relaxed">
+              <p className="text-muted-foreground font-sans leading-relaxed mb-4">
                 I work in the gap between intention and outcome...
               </p>
               
-              <ul className="mt-6 space-y-3 text-muted-foreground font-sans">
-                <li className={`scroll-hidden stagger-1 ${isVisible ? 'scroll-visible' : ''}`}>
-                  Burning capital on coordination instead of execution
+              <ul className="space-y-4 text-muted-foreground font-sans">
+                <li className={`flex items-start gap-3 scroll-hidden stagger-1 ${isVisible ? 'scroll-visible' : ''}`}>
+                  <span className="text-accent-warm mt-1">—</span>
+                  <span>Burning capital on coordination instead of execution</span>
                 </li>
-                <li className={`scroll-hidden stagger-2 ${isVisible ? 'scroll-visible' : ''}`}>
-                  Leaders who care and are solving the wrong problems really well
+                <li className={`flex items-start gap-3 scroll-hidden stagger-2 ${isVisible ? 'scroll-visible' : ''}`}>
+                  <span className="text-accent-warm mt-1">—</span>
+                  <span>Leaders who care and are solving the wrong problems really well</span>
                 </li>
-                <li className={`scroll-hidden stagger-3 ${isVisible ? 'scroll-visible' : ''}`}>
-                  Teams misaligned after growth, crisis, or turnover
+                <li className={`flex items-start gap-3 scroll-hidden stagger-3 ${isVisible ? 'scroll-visible' : ''}`}>
+                  <span className="text-accent-warm mt-1">—</span>
+                  <span>Teams misaligned after growth, crisis, or turnover</span>
                 </li>
-                <li className={`scroll-hidden stagger-4 ${isVisible ? 'scroll-visible' : ''}`}>
-                  Everyone knows something's wrong but no one agrees on what
+                <li className={`flex items-start gap-3 scroll-hidden stagger-4 ${isVisible ? 'scroll-visible' : ''}`}>
+                  <span className="text-accent-warm mt-1">—</span>
+                  <span>Everyone knows something's wrong but no one agrees on what</span>
                 </li>
               </ul>
             </CardContent>
