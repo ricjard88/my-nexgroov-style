@@ -20,19 +20,19 @@ const Conditions = () => {
               <ul className="space-y-4 text-muted-foreground font-sans">
                 <li className={`flex items-start gap-3 scroll-hidden stagger-1 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>A defensible revenue stream already exists</span>
+                  <span>Revenue is real - the operations are the constraint</span>
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-2 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Chain of command is ambiguous or contested</span>
+                  <span>Leadership committed to solving the problem, not managing optics</span>
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-3 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Execution quality is inconsistent despite sufficient resources</span>
+                  <span>Authority exists to implement, not just recommend</span>
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-4 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Organizational output underperforms its structural potential</span>
+                  <span>Timeline is quarters of execution, not years of planning</span>
                 </li>
               </ul>
             </CardContent>

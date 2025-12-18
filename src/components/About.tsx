@@ -18,7 +18,7 @@ const About = () => {
           <Card className="border border-border/30 bg-card card-hover">
             <CardContent className="p-5 md:p-6">
               <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-                I work in the gap between intention and outcome...
+                My work is in the gap between intentions and outcomes.
               </p>
               
               <ul className="space-y-4 text-muted-foreground font-sans">
@@ -28,7 +28,7 @@ const About = () => {
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-2 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Leaders who care and are solving the wrong problems really well</span>
+                  <span>Leaders solving the wrong problems really well</span>
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-3 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
@@ -36,7 +36,7 @@ const About = () => {
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-4 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Everyone knows something's wrong but no one agrees on what</span>
+                  <span>Everyone knows something's wrong but no one agrees what</span>
                 </li>
               </ul>
             </CardContent>
