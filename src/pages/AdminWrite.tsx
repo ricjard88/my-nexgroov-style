@@ -9,8 +9,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "@/hooks/use-toast";
 import { Trash2, Edit, Plus } from "lucide-react";
 
-const ADMIN_PASSWORD = "graystone2024";
-
 interface BlogPost {
   id: string;
   title: string;
@@ -34,6 +32,7 @@ const generateSlug = (title: string): string => {
 const AdminWrite = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
+  const [verifying, setVerifying] = useState(false);
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   
@@ -57,14 +56,28 @@ const AdminWrite = () => {
     }
   }, [isAuthenticated]);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      sessionStorage.setItem("admin_auth", "true");
-      setIsAuthenticated(true);
-    } else {
-      toast({ title: "Invalid password", variant: "destructive" });
+    setVerifying(true);
+    
+    try {
+      const { data, error } = await supabase.functions.invoke("verify-admin", {
+        body: { password },
+      });
+
+      if (error) {
+        toast({ title: "Error verifying password", variant: "destructive" });
+      } else if (data?.valid) {
+        sessionStorage.setItem("admin_auth", "true");
+        setIsAuthenticated(true);
+      } else {
+        toast({ title: "Invalid password", variant: "destructive" });
+      }
+    } catch {
+      toast({ title: "Error connecting to server", variant: "destructive" });
     }
+    
+    setVerifying(false);
   };
 
   const fetchPosts = async () => {
@@ -160,8 +173,8 @@ const AdminWrite = () => {
                   placeholder="Enter admin password"
                 />
               </div>
-              <Button type="submit" className="w-full">
-                Login
+              <Button type="submit" className="w-full" disabled={verifying}>
+                {verifying ? "Verifying..." : "Login"}
               </Button>
             </form>
           </CardContent>
