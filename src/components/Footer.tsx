@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -6,9 +7,9 @@ const Footer = () => {
       <div className="container max-w-5xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
           <div>
-            <p className="text-sm text-foreground font-serif">
+            <Link to="/manage" className="text-sm text-foreground font-serif hover:text-foreground">
               Strategic Operator
-            </p>
+            </Link>
             <p className="text-sm text-muted-foreground font-sans">
               Hard Problems
             </p>
