@@ -1,9 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -18,15 +21,19 @@ const Header = () => {
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
-          <Button variant="nav" onClick={() => scrollToSection("methodology")}>
-            Methodology
-          </Button>
-          <Button variant="nav" onClick={() => scrollToSection("conditions")}>
-            Conditions
-          </Button>
-          <Button variant="nav" onClick={() => scrollToSection("contact")}>
-            Contact
-          </Button>
+          <Link to="/methodology">
+            <Button variant="nav">Methodology</Button>
+          </Link>
+          {isHomePage && (
+            <>
+              <Button variant="nav" onClick={() => scrollToSection("conditions")}>
+                Conditions
+              </Button>
+              <Button variant="nav" onClick={() => scrollToSection("contact")}>
+                Contact
+              </Button>
+            </>
+          )}
         </nav>
 
         <Button
