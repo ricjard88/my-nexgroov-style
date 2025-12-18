@@ -30,25 +30,20 @@ const MethodologyPage = () => {
             
             <div className="max-w-2xl space-y-4">
               <p className="text-muted-foreground font-sans leading-relaxed">
-                The work begins with diagnosis: identify root bottlenecks rather than symptoms.
+                I start by identifying what's actually broken: <span className="text-foreground">root causes</span>, not symptoms.
               </p>
               
               <p className="text-muted-foreground font-sans leading-relaxed">
-                Engagement is <span className="text-foreground">retained</span>. 
-                Clients are <span className="text-foreground">limited</span>. 
-                Access is <span className="text-foreground">embedded</span>. 
-                Success criteria is <span className="text-foreground">defined in advance</span>.
+                I work <span className="text-foreground">retained</span> with <span className="text-foreground">limited clients</span>. Access is <span className="text-foreground">embedded</span>, success criteria <span className="text-foreground">defined in advance</span>.
               </p>
 
-              <div className="pt-3 border-t border-border/40">
-                <p className="text-muted-foreground font-sans leading-relaxed">
-                  I remain until the system can run without me.
-                  Sometimes it's 90 days. Sometimes it's a year.
-                </p>
-                <p className="mt-3 text-foreground font-serif italic">
-                  My job is to make myself unnecessary.
-                </p>
-              </div>
+              <p className="text-muted-foreground font-sans leading-relaxed">
+                I stay until the system runs without me: sometimes 90 days, sometimes a year.
+              </p>
+
+              <p className="mt-3 text-foreground font-serif italic">
+                Success for me is solving the challenge and departing.
+              </p>
             </div>
           </div>
         </div>
