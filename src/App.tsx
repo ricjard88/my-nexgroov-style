@@ -25,7 +25,7 @@ const App = () => (
             <Route path="/methodology" element={<MethodologyPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
-            <Route path="/admin/write" element={<AdminWrite />} />
+            <Route path="/manage" element={<AdminWrite />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
