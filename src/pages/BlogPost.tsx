@@ -1,28 +1,59 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-// This should match the posts in Blog.tsx - consider moving to a shared file
-const blogPosts = [
-  {
-    id: "1",
-    title: "Sample Blog Post",
-    date: "2024-01-15",
-    excerpt: "This is a sample blog post. Replace this with your actual content.",
-    content: `This is the full content of your blog post. You can write as much as you want here.
-
-Add paragraphs, insights, and thoughts about operational consulting, organizational improvement, or any topic relevant to your work.
-
-Feel free to structure your posts with multiple paragraphs and share your expertise with your readers.`
-  },
-];
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  content: string;
+  published_at: string | null;
+}
 
 const BlogPostPage = () => {
-  const { id } = useParams();
-  const post = blogPosts.find(p => p.id === id);
+  const { slug } = useParams();
+  const [post, setPost] = useState<BlogPost | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!post) {
+  useEffect(() => {
+    const fetchPost = async () => {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("*")
+        .eq("slug", slug)
+        .eq("status", "published")
+        .maybeSingle();
+
+      if (error || !data) {
+        setNotFound(true);
+      } else {
+        setPost(data);
+      }
+      setLoading(false);
+    };
+
+    fetchPost();
+  }, [slug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="pt-24 pb-12">
+          <div className="container max-w-3xl mx-auto px-6">
+            <p className="text-muted-foreground">Loading...</p>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (notFound) {
     return <Navigate to="/blog" replace />;
   }
 
@@ -41,17 +72,17 @@ const BlogPostPage = () => {
           
           <article>
             <time className="text-sm text-muted-foreground font-sans">
-              {new Date(post.date).toLocaleDateString('en-US', { 
+              {post?.published_at && new Date(post.published_at).toLocaleDateString('en-US', { 
                 year: 'numeric', 
                 month: 'long', 
                 day: 'numeric' 
               })}
             </time>
             <h1 className="text-3xl md:text-4xl font-serif font-medium text-foreground mt-2 mb-8">
-              {post.title}
+              {post?.title}
             </h1>
             <div className="prose prose-neutral dark:prose-invert max-w-none">
-              {post.content.split('\n\n').map((paragraph, index) => (
+              {post?.content.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="text-muted-foreground font-sans leading-relaxed mb-4">
                   {paragraph}
                 </p>

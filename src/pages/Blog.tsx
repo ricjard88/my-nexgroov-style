@@ -1,25 +1,39 @@
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
-// Add your blog posts here
-const blogPosts = [
-  {
-    id: "1",
-    title: "Sample Blog Post",
-    date: "2024-01-15",
-    excerpt: "This is a sample blog post. Replace this with your actual content.",
-    content: `
-      This is the full content of your blog post. You can write as much as you want here.
-      
-      Add paragraphs, insights, and thoughts about operational consulting, organizational improvement, or any topic relevant to your work.
-    `
-  },
-];
+interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  published_at: string | null;
+}
 
 const BlogPage = () => {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const { data, error } = await supabase
+        .from("blog_posts")
+        .select("id, title, slug, published_at")
+        .eq("status", "published")
+        .order("published_at", { ascending: false });
+
+      if (!error && data) {
+        setPosts(data);
+      }
+      setLoading(false);
+    };
+
+    fetchPosts();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -37,29 +51,32 @@ const BlogPage = () => {
             Blog
           </h1>
           
-          <div className="space-y-6">
-            {blogPosts.map((post) => (
-              <Link key={post.id} to={`/blog/${post.id}`}>
-                <Card className="border border-border/30 bg-card card-hover">
-                  <CardContent className="p-5 md:p-6">
-                    <time className="text-sm text-muted-foreground font-sans">
-                      {new Date(post.date).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
-                    </time>
-                    <h2 className="text-xl font-serif font-medium text-foreground mt-2">
-                      {post.title}
-                    </h2>
-                    <p className="mt-3 text-muted-foreground font-sans leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
+          {loading ? (
+            <p className="text-muted-foreground">Loading...</p>
+          ) : posts.length === 0 ? (
+            <p className="text-muted-foreground">No posts yet.</p>
+          ) : (
+            <div className="space-y-6">
+              {posts.map((post) => (
+                <Link key={post.id} to={`/blog/${post.slug}`}>
+                  <Card className="border border-border/30 bg-card card-hover">
+                    <CardContent className="p-5 md:p-6">
+                      <time className="text-sm text-muted-foreground font-sans">
+                        {post.published_at && new Date(post.published_at).toLocaleDateString('en-US', { 
+                          year: 'numeric', 
+                          month: 'long', 
+                          day: 'numeric' 
+                        })}
+                      </time>
+                      <h2 className="text-xl font-serif font-medium text-foreground mt-2">
+                        {post.title}
+                      </h2>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </main>
       <Footer />
