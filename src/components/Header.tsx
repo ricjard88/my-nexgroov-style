@@ -24,6 +24,9 @@ const Header = () => {
           <Link to="/methodology">
             <Button variant="nav">Methodology</Button>
           </Link>
+          <Link to="/blog">
+            <Button variant="nav">Blog</Button>
+          </Link>
           {isHomePage && (
             <>
               <Button variant="nav" onClick={() => scrollToSection("conditions")}>

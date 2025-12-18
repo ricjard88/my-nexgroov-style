@@ -14,7 +14,7 @@ const About = () => {
           <Card className="border border-border/30 bg-card card-hover">
             <CardContent className="p-5 md:p-6">
               <h3 className="text-xl md:text-2xl font-serif font-medium text-foreground">
-                Where I'm Useful
+                Operating Conditions
               </h3>
               
               <p className="mt-4 text-muted-foreground font-sans leading-relaxed">
