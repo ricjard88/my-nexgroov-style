@@ -151,10 +151,12 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         />
       </div>
 
-      {/* Level indicator */}
-      <p className="text-muted-foreground text-sm mb-6">
-        {gameOver ? 'Time\'s up!' : isComplete ? 'Complete! All 11 levels!' : `Level ${level} of ${MAX_LEVEL}`}
-      </p>
+      {/* Level indicator - hide when complete */}
+      {!isComplete && (
+        <p className="text-muted-foreground text-sm mb-6">
+          {gameOver ? 'Time\'s up!' : `Level ${level} of ${MAX_LEVEL}`}
+        </p>
+      )}
 
       {/* Game over - restart button */}
       {gameOver && (
@@ -170,8 +172,28 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         </button>
       )}
 
-      {/* Enter Site button - appears from level 3+ or when complete */}
-      {(canEnterSite || isComplete) && !gameOver && (
+      {/* Completion state - centered with message */}
+      {isComplete && !gameOver && (
+        <div className="flex flex-col items-center animate-fade-in">
+          <p className="text-muted-foreground/70 text-xs mb-4 font-serif italic">
+            Noise fades. Patterns remain.
+          </p>
+          <button
+            onClick={onEnter}
+            className={cn(
+              "px-8 py-3 rounded-md bg-[hsl(270_40%_55%)] text-white",
+              "hover:bg-[hsl(270_40%_60%)] transition-all duration-200",
+              "font-sans text-sm font-medium",
+              "shadow-lg shadow-[hsl(270_40%_50%/0.3)] hover:shadow-[hsl(270_40%_55%/0.4)]"
+            )}
+          >
+            Enter Site →
+          </button>
+        </div>
+      )}
+
+      {/* Enter Site button - appears from level 3+ but not when complete */}
+      {canEnterSite && !isComplete && !gameOver && (
         <button
           onClick={onEnter}
           className={cn(
