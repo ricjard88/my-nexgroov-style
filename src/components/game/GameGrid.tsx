@@ -5,9 +5,12 @@ interface Tile {
   isStable: boolean;
 }
 
+type PatternType = 'rotation' | 'scale' | 'opacity' | 'pulse' | 'wobble' | 'chaos' | 
+                   'rotation-fast' | 'scale-fast' | 'opacity-fast' | 'pulse-fast' | 'wobble-fast' | 'chaos-fast';
+
 interface GameGridProps {
   tiles: Tile[];
-  patternType: 'rotation' | 'scale' | 'opacity';
+  patternType: PatternType;
   onTileClick: (index: number, isStable: boolean) => void;
 }
 

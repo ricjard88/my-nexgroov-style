@@ -8,9 +8,9 @@ const TimerBar = ({ timeLeft, maxTime }: TimerBarProps) => {
   
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="h-2 bg-muted rounded-full overflow-hidden">
+      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
         <div
-          className="h-full bg-accent transition-all duration-100 ease-linear rounded-full"
+          className="h-full bg-purple-500 transition-all duration-100 ease-linear rounded-full shadow-lg shadow-purple-500/50"
           style={{ width: `${percentage}%` }}
         />
       </div>
