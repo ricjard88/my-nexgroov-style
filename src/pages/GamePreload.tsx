@@ -138,19 +138,23 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         )}
       </div>
 
-      {/* Timer */}
-      <div className="w-full max-w-xs sm:max-w-sm mb-8 px-4">
-        <TimerBar timeLeft={timeLeft} maxTime={INITIAL_TIME} />
-      </div>
+      {/* Timer - hide when complete */}
+      {!isComplete && (
+        <div className="w-full max-w-xs sm:max-w-sm mb-8 px-4">
+          <TimerBar timeLeft={timeLeft} maxTime={INITIAL_TIME} />
+        </div>
+      )}
 
-      {/* Grid */}
-      <div className="mb-8 px-4 w-full">
-        <GameGrid 
-          tiles={tiles} 
-          patternType={patternType} 
-          onTileClick={handleTileClick}
-        />
-      </div>
+      {/* Grid - hide when complete */}
+      {!isComplete && (
+        <div className="mb-8 px-4 w-full">
+          <GameGrid 
+            tiles={tiles} 
+            patternType={patternType} 
+            onTileClick={handleTileClick}
+          />
+        </div>
+      )}
 
       {/* Level indicator - hide when complete */}
       {!isComplete && (
