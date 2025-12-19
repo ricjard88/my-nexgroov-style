@@ -99,6 +99,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
     if (nextLevel > MAX_LEVEL) {
       // Game completed - all 11 levels done
       if (timerRef.current) clearInterval(timerRef.current);
+      setLevel(nextLevel); // Set level to trigger isComplete
       return;
     }
 
