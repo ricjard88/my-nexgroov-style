@@ -28,6 +28,7 @@ const App = () => {
   const handleGameComplete = () => {
     localStorage.setItem(GAME_COMPLETED_KEY, 'true');
     setShowGame(false);
+    window.scrollTo(0, 0);
   };
 
   // Loading state
