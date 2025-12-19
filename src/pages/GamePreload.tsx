@@ -17,8 +17,8 @@ interface Tile {
   isStable: boolean;
 }
 
-type PatternType = 'rotation' | 'scale' | 'opacity' | 'pulse' | 'wobble' | 'chaos' | 
-                   'rotation-fast' | 'scale-fast' | 'opacity-fast' | 'pulse-fast' | 'wobble-fast' | 'chaos-fast';
+type PatternType = 'rotation' | 'scale' | 'glow' | 'drift' | 'sway' | 'breathe' | 
+                   'rotation-fast' | 'scale-fast' | 'glow-fast' | 'drift-fast' | 'sway-fast' | 'breathe-fast';
 
 const GamePreload = ({ onEnter }: GamePreloadProps) => {
   const [tiles, setTiles] = useState<Tile[]>([]);
@@ -41,27 +41,24 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
   }, []);
 
   const getPatternForLevel = (lvl: number): PatternType => {
-    // Difficulty escalation:
-    // 1-2: Easy (slow rotation)
-    // 3: Medium (scale)
-    // 4: Medium (opacity) - Enter site available
-    // 5-6: Hard (pulse, wobble - faster)
-    // 7-8: Very hard (fast versions)
-    // 9-10: Extreme (chaos)
-    // 11: Maximum chaos
+    // Gentle difficulty progression - no harsh flashing
+    // 1-2: Easy (slow rotation, scale)
+    // 3-4: Medium (glow, drift)
+    // 5-6: Harder (sway, breathe)
+    // 7-11: Fast versions
     switch (lvl) {
       case 1: return 'rotation';
       case 2: return 'scale';
-      case 3: return 'opacity';
-      case 4: return 'pulse';
-      case 5: return 'wobble';
-      case 6: return 'rotation-fast';
-      case 7: return 'scale-fast';
-      case 8: return 'opacity-fast';
-      case 9: return 'pulse-fast';
-      case 10: return 'wobble-fast';
-      case 11: return 'chaos-fast';
-      default: return 'chaos-fast';
+      case 3: return 'glow';
+      case 4: return 'drift';
+      case 5: return 'sway';
+      case 6: return 'breathe';
+      case 7: return 'rotation-fast';
+      case 8: return 'scale-fast';
+      case 9: return 'glow-fast';
+      case 10: return 'drift-fast';
+      case 11: return 'breathe-fast';
+      default: return 'breathe-fast';
     }
   };
 
@@ -128,12 +125,12 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
   const canEnterSite = level >= CAN_ENTER_FROM_LEVEL;
 
   return (
-    <div className="min-h-screen bg-gray-900 flex flex-col items-center justify-center px-4 py-8">
+    <div className="dark min-h-screen bg-background flex flex-col items-center justify-center px-4 py-8">
       {/* Intro text */}
       <div className="h-16 flex items-center justify-center mb-8">
         {showIntro && (
           <h1 
-            className="font-serif text-xl sm:text-2xl text-gray-200 animate-fade-in text-center"
+            className="font-serif text-xl sm:text-2xl text-foreground animate-fade-in text-center"
           >
             One tile does not change.
           </h1>
@@ -155,7 +152,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
       </div>
 
       {/* Level indicator */}
-      <p className="text-gray-400 text-sm mb-6">
+      <p className="text-muted-foreground text-sm mb-6">
         {gameOver ? 'Time\'s up!' : isComplete ? 'Complete! All 11 levels!' : `Level ${level} of ${MAX_LEVEL}`}
       </p>
 
@@ -164,8 +161,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={handleRestart}
           className={cn(
-            "px-6 py-3 rounded-md border border-purple-500/50 bg-gray-800 text-gray-200",
-            "hover:bg-gray-700 hover:border-purple-400 transition-all duration-200",
+            "px-6 py-3 rounded-md border border-[hsl(270_40%_50%/0.5)] bg-secondary text-foreground",
+            "hover:bg-[hsl(270_40%_30%)] hover:border-[hsl(270_40%_60%)] transition-all duration-200",
             "font-sans text-sm animate-fade-in"
           )}
         >
@@ -178,10 +175,10 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-purple-600 text-white",
-            "hover:bg-purple-500 transition-all duration-200",
+            "px-8 py-3 rounded-md bg-[hsl(270_40%_55%)] text-white",
+            "hover:bg-[hsl(270_40%_60%)] transition-all duration-200",
             "font-sans text-sm font-medium animate-fade-in",
-            "shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50"
+            "shadow-lg shadow-[hsl(270_40%_50%/0.3)] hover:shadow-[hsl(270_40%_55%/0.4)]"
           )}
         >
           Enter Site →
@@ -192,7 +189,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
       {!canEnterSite && !gameOver && (
         <button
           onClick={onEnter}
-          className="mt-8 text-gray-500 text-xs hover:text-gray-400 transition-colors"
+          className="mt-8 text-muted-foreground text-xs hover:text-foreground transition-colors"
         >
           Skip
         </button>
