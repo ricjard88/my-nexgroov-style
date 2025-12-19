@@ -180,9 +180,9 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
       {/* Completion state - centered with message */}
       {isComplete && !gameOver && (
         <div className="flex flex-col items-center animate-fade-in">
-          <p className="text-muted-foreground/70 text-xs mb-4 font-serif italic">
-            Noise fades. Patterns remain.
-          </p>
+        <p className="text-muted-foreground/70 text-lg sm:text-xl mb-6 font-serif italic">
+          Noise fades. Patterns remain.
+        </p>
           <button
             onClick={onEnter}
             className={cn(
