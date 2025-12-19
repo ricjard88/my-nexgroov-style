@@ -19,25 +19,25 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
-      <div className="container max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="container max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="font-serif text-sm tracking-wide">
           Richard Graystone
         </div>
         
-        <nav className="hidden md:flex items-center gap-8">
-          <Link to="/methodology">
-            <Button variant="nav">Methodology</Button>
-          </Link>
-          <Button variant="nav" onClick={() => navigateToSection("conditions")}>
-            Conditions
-          </Button>
-          <Link to="/blog">
-            <Button variant="nav">Blog</Button>
-          </Link>
-          <Button variant="nav" onClick={() => navigateToSection("contact")}>
-            Contact
-          </Button>
-        </nav>
+        <nav className="flex overflow-x-auto no-scrollbar items-center gap-4 md:gap-8">
+      <Link to="/methodology">
+        <Button variant="nav">Methodology</Button>
+      </Link>
+      <Button variant="nav" onClick={() => navigateToSection("conditions")}>
+        Conditions
+      </Button>
+      <Link to="/blog">
+        <Button variant="nav">Blog</Button>
+      </Link>
+      <Button variant="nav" onClick={() => navigateToSection("contact")}>
+        Contact
+      </Button>
+    </nav>
 
         <Button
           variant="ghost"
