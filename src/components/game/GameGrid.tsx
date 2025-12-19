@@ -5,8 +5,8 @@ interface Tile {
   isStable: boolean;
 }
 
-type PatternType = 'rotation' | 'scale' | 'opacity' | 'pulse' | 'wobble' | 'chaos' | 
-                   'rotation-fast' | 'scale-fast' | 'opacity-fast' | 'pulse-fast' | 'wobble-fast' | 'chaos-fast';
+type PatternType = 'rotation' | 'scale' | 'glow' | 'drift' | 'sway' | 'breathe' | 
+                   'rotation-fast' | 'scale-fast' | 'glow-fast' | 'drift-fast' | 'sway-fast' | 'breathe-fast';
 
 interface GameGridProps {
   tiles: Tile[];

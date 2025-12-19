@@ -2,8 +2,8 @@ import { cn } from "@/lib/utils";
 
 interface GameTileProps {
   isStable: boolean;
-  patternType: 'rotation' | 'scale' | 'opacity' | 'pulse' | 'wobble' | 'chaos' | 
-               'rotation-fast' | 'scale-fast' | 'opacity-fast' | 'pulse-fast' | 'wobble-fast' | 'chaos-fast';
+  patternType: 'rotation' | 'scale' | 'glow' | 'drift' | 'sway' | 'breathe' | 
+               'rotation-fast' | 'scale-fast' | 'glow-fast' | 'drift-fast' | 'sway-fast' | 'breathe-fast';
   onClick: () => void;
 }
 
@@ -20,22 +20,22 @@ const GameTile = ({ isStable, patternType, onClick }: GameTileProps) => {
         return 'animate-tile-scale';
       case 'scale-fast':
         return 'animate-tile-scale-fast';
-      case 'opacity':
-        return 'animate-tile-opacity';
-      case 'opacity-fast':
-        return 'animate-tile-opacity-fast';
-      case 'pulse':
-        return 'animate-tile-pulse';
-      case 'pulse-fast':
-        return 'animate-tile-pulse-fast';
-      case 'wobble':
-        return 'animate-tile-wobble';
-      case 'wobble-fast':
-        return 'animate-tile-wobble-fast';
-      case 'chaos':
-        return 'animate-tile-chaos';
-      case 'chaos-fast':
-        return 'animate-tile-chaos-fast';
+      case 'glow':
+        return 'animate-tile-glow';
+      case 'glow-fast':
+        return 'animate-tile-glow-fast';
+      case 'drift':
+        return 'animate-tile-drift';
+      case 'drift-fast':
+        return 'animate-tile-drift-fast';
+      case 'sway':
+        return 'animate-tile-sway';
+      case 'sway-fast':
+        return 'animate-tile-sway-fast';
+      case 'breathe':
+        return 'animate-tile-breathe';
+      case 'breathe-fast':
+        return 'animate-tile-breathe-fast';
       default:
         return 'animate-tile-rotate';
     }
@@ -45,15 +45,15 @@ const GameTile = ({ isStable, patternType, onClick }: GameTileProps) => {
     <button
       onClick={onClick}
       className={cn(
-        "aspect-square w-full rounded-lg border border-purple-500/30 bg-gray-800/50 transition-all duration-200",
-        "hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer",
-        "focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900",
+        "aspect-square w-full rounded-lg border border-[hsl(270_40%_50%/0.3)] bg-[hsl(0_0%_22%)] transition-all duration-200",
+        "hover:border-[hsl(270_40%_60%)] hover:shadow-lg hover:shadow-[hsl(270_40%_60%/0.2)] cursor-pointer",
+        "focus:outline-none focus:ring-2 focus:ring-[hsl(270_40%_60%)] focus:ring-offset-2 focus:ring-offset-[hsl(0_0%_18%)]",
         getAnimationClass()
       )}
       aria-label="Game tile"
     >
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-1/2 h-1/2 bg-purple-500 rounded-full shadow-lg shadow-purple-500/50" />
+        <div className="w-1/2 h-1/2 bg-[hsl(270_40%_70%)] rounded-full shadow-lg shadow-[hsl(270_40%_60%/0.4)]" />
       </div>
     </button>
   );

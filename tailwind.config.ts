@@ -98,37 +98,37 @@ export default {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
         },
+        // Gentle rotation - smooth and slow
         "tile-rotate": {
           "0%": { transform: "rotate(0deg)" },
-          "25%": { transform: "rotate(90deg)" },
-          "50%": { transform: "rotate(180deg)" },
-          "75%": { transform: "rotate(270deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        // Gentle scale - subtle breathing effect
         "tile-scale": {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(0.7)" },
+          "50%": { transform: "scale(0.88)" },
         },
-        "tile-opacity": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.2" },
+        // Glow pulse - shadow animation instead of opacity flash
+        "tile-glow": {
+          "0%, 100%": { boxShadow: "0 0 8px 2px hsl(270 40% 65% / 0.4)" },
+          "50%": { boxShadow: "0 0 20px 6px hsl(270 40% 70% / 0.6)" },
         },
-        "tile-pulse": {
-          "0%, 100%": { transform: "scale(1)", opacity: "1" },
-          "50%": { transform: "scale(0.85)", opacity: "0.6" },
+        // Gentle drift - subtle floating motion
+        "tile-drift": {
+          "0%, 100%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(2px, -3px)" },
+          "50%": { transform: "translate(-2px, 2px)" },
+          "75%": { transform: "translate(3px, 1px)" },
         },
-        "tile-wobble": {
-          "0%, 100%": { transform: "rotate(-5deg) scale(1)" },
-          "25%": { transform: "rotate(5deg) scale(1.05)" },
-          "50%": { transform: "rotate(-5deg) scale(0.95)" },
-          "75%": { transform: "rotate(5deg) scale(1)" },
+        // Gentle sway - soft rotation wobble
+        "tile-sway": {
+          "0%, 100%": { transform: "rotate(-2deg)" },
+          "50%": { transform: "rotate(2deg)" },
         },
-        "tile-chaos": {
-          "0%": { transform: "rotate(0deg) scale(1)", opacity: "1" },
-          "25%": { transform: "rotate(90deg) scale(0.8)", opacity: "0.5" },
-          "50%": { transform: "rotate(180deg) scale(1.1)", opacity: "0.8" },
-          "75%": { transform: "rotate(270deg) scale(0.9)", opacity: "0.4" },
-          "100%": { transform: "rotate(360deg) scale(1)", opacity: "1" },
+        // Breathe - combine scale with gentle glow
+        "tile-breathe": {
+          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 8px 2px hsl(270 40% 65% / 0.3)" },
+          "50%": { transform: "scale(0.92)", boxShadow: "0 0 16px 4px hsl(270 40% 70% / 0.5)" },
         },
       },
       animation: {
@@ -139,19 +139,19 @@ export default {
         "slide-up": "slide-up 0.6s ease-out forwards",
         "grow-width": "grow-width 0.8s ease-out forwards",
         "blink": "blink 1s step-end infinite",
-        "tile-rotate": "tile-rotate 2s linear infinite",
-        "tile-rotate-fast": "tile-rotate 1.2s linear infinite",
-        "tile-rotate-faster": "tile-rotate 0.8s linear infinite",
-        "tile-scale": "tile-scale 1.5s ease-in-out infinite",
-        "tile-scale-fast": "tile-scale 0.8s ease-in-out infinite",
-        "tile-opacity": "tile-opacity 1.2s ease-in-out infinite",
-        "tile-opacity-fast": "tile-opacity 0.6s ease-in-out infinite",
-        "tile-pulse": "tile-pulse 1s ease-in-out infinite",
-        "tile-pulse-fast": "tile-pulse 0.5s ease-in-out infinite",
-        "tile-wobble": "tile-wobble 1.2s ease-in-out infinite",
-        "tile-wobble-fast": "tile-wobble 0.6s ease-in-out infinite",
-        "tile-chaos": "tile-chaos 1.5s ease-in-out infinite",
-        "tile-chaos-fast": "tile-chaos 0.8s ease-in-out infinite",
+        // Slow, gentle animations - no flashing
+        "tile-rotate": "tile-rotate 4s linear infinite",
+        "tile-rotate-fast": "tile-rotate 2.5s linear infinite",
+        "tile-scale": "tile-scale 3s ease-in-out infinite",
+        "tile-scale-fast": "tile-scale 2s ease-in-out infinite",
+        "tile-glow": "tile-glow 3s ease-in-out infinite",
+        "tile-glow-fast": "tile-glow 2s ease-in-out infinite",
+        "tile-drift": "tile-drift 4s ease-in-out infinite",
+        "tile-drift-fast": "tile-drift 2.5s ease-in-out infinite",
+        "tile-sway": "tile-sway 3s ease-in-out infinite",
+        "tile-sway-fast": "tile-sway 2s ease-in-out infinite",
+        "tile-breathe": "tile-breathe 3.5s ease-in-out infinite",
+        "tile-breathe-fast": "tile-breathe 2s ease-in-out infinite",
       },
     },
   },

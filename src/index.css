@@ -171,3 +171,21 @@
   .stagger-3 { transition-delay: 0.3s; }
   .stagger-4 { transition-delay: 0.4s; }
 }
+
+/* Accessibility: Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-tile-rotate,
+  .animate-tile-rotate-fast,
+  .animate-tile-scale,
+  .animate-tile-scale-fast,
+  .animate-tile-glow,
+  .animate-tile-glow-fast,
+  .animate-tile-drift,
+  .animate-tile-drift-fast,
+  .animate-tile-sway,
+  .animate-tile-sway-fast,
+  .animate-tile-breathe,
+  .animate-tile-breathe-fast {
+    animation: none !important;
+  }
+}
