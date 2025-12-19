@@ -103,32 +103,32 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
-        // Gentle scale - subtle breathing effect
+        // Dramatic scale - very visible pulsing
         "tile-scale": {
           "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(0.88)" },
+          "50%": { transform: "scale(0.65)" },
         },
-        // Glow pulse - shadow animation instead of opacity flash
+        // Glow pulse - much more visible glow
         "tile-glow": {
-          "0%, 100%": { boxShadow: "0 0 8px 2px hsl(270 40% 65% / 0.4)" },
-          "50%": { boxShadow: "0 0 20px 6px hsl(270 40% 70% / 0.6)" },
+          "0%, 100%": { boxShadow: "0 0 12px 4px hsl(270 40% 65% / 0.5)" },
+          "50%": { boxShadow: "0 0 35px 12px hsl(270 40% 70% / 0.8)" },
         },
-        // Gentle drift - subtle floating motion
+        // Visible drift - noticeable floating motion
         "tile-drift": {
           "0%, 100%": { transform: "translate(0, 0)" },
-          "25%": { transform: "translate(2px, -3px)" },
-          "50%": { transform: "translate(-2px, 2px)" },
-          "75%": { transform: "translate(3px, 1px)" },
+          "25%": { transform: "translate(8px, -10px)" },
+          "50%": { transform: "translate(-8px, 8px)" },
+          "75%": { transform: "translate(10px, 4px)" },
         },
-        // Gentle sway - soft rotation wobble
+        // Visible sway - noticeable rotation wobble
         "tile-sway": {
-          "0%, 100%": { transform: "rotate(-2deg)" },
-          "50%": { transform: "rotate(2deg)" },
+          "0%, 100%": { transform: "rotate(-10deg)" },
+          "50%": { transform: "rotate(10deg)" },
         },
-        // Breathe - combine scale with gentle glow
+        // Breathe - combine scale with dramatic glow
         "tile-breathe": {
-          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 8px 2px hsl(270 40% 65% / 0.3)" },
-          "50%": { transform: "scale(0.92)", boxShadow: "0 0 16px 4px hsl(270 40% 70% / 0.5)" },
+          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 10px 3px hsl(270 40% 65% / 0.4)" },
+          "50%": { transform: "scale(0.7)", boxShadow: "0 0 30px 10px hsl(270 40% 70% / 0.7)" },
         },
       },
       animation: {
