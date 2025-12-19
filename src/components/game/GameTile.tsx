@@ -53,7 +53,7 @@ const GameTile = ({ isStable, patternType, onClick }: GameTileProps) => {
       aria-label="Game tile"
     >
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-1/2 h-1/2 bg-[hsl(270_40%_70%)] rounded-full shadow-lg shadow-[hsl(270_40%_60%/0.4)]" />
+        <div className="w-1/2 h-1/2 bg-[hsl(270_40%_70%)] rounded-sm shadow-lg shadow-[hsl(270_40%_60%/0.4)]" />
       </div>
     </button>
   );
