@@ -1,16 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === "/";
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+  const navigateToSection = (id: string) => {
+    if (isHomePage) {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate(`/#${id}`);
+    }
   };
 
   return (
@@ -24,19 +28,15 @@ const Header = () => {
           <Link to="/methodology">
             <Button variant="nav">Methodology</Button>
           </Link>
-          {isHomePage && (
-            <Button variant="nav" onClick={() => scrollToSection("conditions")}>
-              Conditions
-            </Button>
-          )}
+          <Button variant="nav" onClick={() => navigateToSection("conditions")}>
+            Conditions
+          </Button>
           <Link to="/blog">
             <Button variant="nav">Blog</Button>
           </Link>
-          {isHomePage && (
-            <Button variant="nav" onClick={() => scrollToSection("contact")}>
-              Contact
-            </Button>
-          )}
+          <Button variant="nav" onClick={() => navigateToSection("contact")}>
+            Contact
+          </Button>
         </nav>
 
         <Button
