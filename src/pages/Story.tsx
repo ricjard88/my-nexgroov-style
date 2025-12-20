@@ -63,7 +63,7 @@ const Story = () => {
           </p>
           <p>In parallel, I take on a small number of clients to solve problems that are strange enough to stretch the imagination and demand curious thinking.</p>
 
-          <p>Outside the work, I spend my time training my understanding of frequency. I do that with a combination of chasing my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.</p>
+          <p>Outside the work, I spend time training my understanding of frequency. I do that with a combination of learning from my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.</p>
 
           <p className="text-foreground font-medium">Thanks for coming to my Ted Talk!</p>
         </div>
