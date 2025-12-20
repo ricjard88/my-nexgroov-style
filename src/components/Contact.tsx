@@ -24,10 +24,10 @@ const Contact = () => {
           
           <div className="mt-6">
             <a 
-              href="mailto:order@richardgraystone.com"
+              href="mailto:hello@richardgraystone.com"
               className="text-accent-warm hover:underline transition-colors duration-200"
             >
-              order@richardgraystone.com
+              hello@richardgraystone.com
             </a>
           </div>
         </div>
