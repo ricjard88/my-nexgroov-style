@@ -135,7 +135,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
 
       {/* Level indicator - hide when complete */}
       {!isComplete && (
-        <p className="text-[hsl(45_90%_50%)] text-sm mb-6">
+        <p className="text-[hsl(270_15%_50%)] text-sm mb-6">
           Level {level} of {MAX_LEVEL}
         </p>
       )}
