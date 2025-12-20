@@ -19,7 +19,7 @@ const Contact = () => {
           </p>
           
           <p className="mt-4 text-muted-foreground font-sans leading-relaxed">
-            If you believe your organization should be functioning better than it is, please feel free to reach out.
+            Reach out to connect.
           </p>
           
           <div className="mt-6">
