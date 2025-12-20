@@ -41,7 +41,7 @@ const Story = () => {
           <p>In startups, I've learned scale, debt, and consequences.</p>
 
           <p className="text-foreground font-medium">
-            I advanced not just because I could talk well but because I showed up and could see what wasn't said and solved it.
+            I advance not just because I speak well but because I show up and see what isn't working and what can work.
           </p>
 
           <p>Founded a company from zero, raised capital.</p>
