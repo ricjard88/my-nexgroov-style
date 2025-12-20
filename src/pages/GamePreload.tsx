@@ -149,8 +149,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
           <button
             onClick={onEnter}
             className={cn(
-              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-black",
-              "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
+              "px-8 py-3 rounded-md bg-[hsl(270_25%_72%)] text-black",
+              "transition-all duration-200 hover:bg-[hsl(270_25%_65%)]",
               "font-sans text-sm font-bold"
             )}
           >
@@ -164,8 +164,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-black",
-            "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
+            "px-8 py-3 rounded-md bg-[hsl(270_25%_72%)] text-black",
+            "transition-all duration-200 hover:bg-[hsl(270_25%_65%)]",
             "font-sans text-sm font-bold animate-fade-in"
           )}
         >
