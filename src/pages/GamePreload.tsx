@@ -20,6 +20,19 @@ const ANIMATION_TYPES = [
   'animate-breath-drift',
 ];
 
+const ENCOURAGING_QUOTES = [
+  "Keep looking.",
+  "Stillness reveals itself.",
+  "Trust your instincts.",
+  "Patience is power.",
+  "Almost there.",
+  "Focus softens the noise.",
+  "You're closer than you think.",
+  "Breathe. Observe.",
+  "The still one waits for you.",
+  "Clarity comes with calm.",
+];
+
 interface GamePreloadProps {
   onEnter: () => void;
 }
@@ -37,8 +50,10 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
   const [level, setLevel] = useState(1);
   const [showIntro, setShowIntro] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
+const [gameOver, setGameOver] = useState(false);
+  const [encourageQuote, setEncourageQuote] = useState<string | null>(null);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const quoteTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateCircles = useCallback((): Circle[] => {
     const stableIndex = Math.floor(Math.random() * POSITIONS.length);
@@ -78,10 +93,18 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
     };
   }, [hasInteracted, gameOver]);
 
-  const handleCircleClick = (position: string, isStable: boolean) => {
+const handleCircleClick = (position: string, isStable: boolean) => {
     if (gameOver) return;
     if (!hasInteracted) setHasInteracted(true);
-    if (!isStable) return;
+    
+    if (!isStable) {
+      // Show random encouraging quote
+      if (quoteTimeoutRef.current) clearTimeout(quoteTimeoutRef.current);
+      const quote = ENCOURAGING_QUOTES[Math.floor(Math.random() * ENCOURAGING_QUOTES.length)];
+      setEncourageQuote(quote);
+      quoteTimeoutRef.current = setTimeout(() => setEncourageQuote(null), 1500);
+      return;
+    }
 
     const nextLevel = level + 1;
     
@@ -100,12 +123,14 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
     setCircles(generateCircles());
   };
 
-  const handleRestart = () => {
+const handleRestart = () => {
     setCircles(generateCircles());
     setTimeLeft(INITIAL_TIME);
     setLevel(1);
     setHasInteracted(false);
     setGameOver(false);
+    setEncourageQuote(null);
+    if (quoteTimeoutRef.current) clearTimeout(quoteTimeoutRef.current);
   };
 
   const isComplete = level > MAX_LEVEL;
@@ -123,6 +148,17 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
           </h1>
         )}
       </div>
+
+      {/* Encouraging quote - shown on wrong click */}
+      {!isComplete && (
+        <div className="h-6 flex items-center justify-center mb-2">
+          {encourageQuote && (
+            <p className="text-[hsl(270_25%_72%)] text-sm font-serif italic animate-fade-in">
+              {encourageQuote}
+            </p>
+          )}
+        </div>
+      )}
 
       {/* Timer - hide when complete */}
       {!isComplete && (
@@ -171,8 +207,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
           <button
             onClick={onEnter}
             className={cn(
-              "px-8 py-3 rounded-md bg-black text-white",
-              "transition-all duration-200 hover:bg-[hsl(0_0%_15%)]",
+              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-[hsl(45_90%_15%)]",
+              "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
               "font-sans text-sm font-medium"
             )}
           >
@@ -186,8 +222,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-black text-white",
-            "transition-all duration-200 hover:bg-[hsl(0_0%_15%)]",
+            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-[hsl(45_90%_15%)]",
+            "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
             "font-sans text-sm font-medium animate-fade-in"
           )}
         >
@@ -199,7 +235,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
       {!canEnterSite && !gameOver && (
         <button
           onClick={onEnter}
-          className="mt-8 text-[hsl(270_15%_60%)] text-xs transition-colors"
+          className="mt-8 text-[hsl(45_90%_40%)] text-xs transition-colors hover:text-[hsl(45_90%_35%)]"
         >
           Skip
         </button>
