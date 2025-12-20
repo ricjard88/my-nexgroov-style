@@ -149,9 +149,9 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
           <button
             onClick={onEnter}
             className={cn(
-              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-white",
+              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-black",
               "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
-              "font-sans text-sm font-medium"
+              "font-sans text-sm font-bold"
             )}
           >
             Get to Know Richard Graystone →
@@ -164,9 +164,9 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-white",
+            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-black",
             "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
-            "font-sans text-sm font-medium animate-fade-in"
+            "font-sans text-sm font-bold animate-fade-in"
           )}
         >
           Get to Know Richard Graystone →
