@@ -10,6 +10,16 @@ const CAN_ENTER_FROM_LEVEL = 3;
 const POSITIONS = ['top', 'bottom', 'left', 'right', 'center'] as const;
 type Position = typeof POSITIONS[number];
 
+const ANIMATION_TYPES = [
+  'animate-orbital-drift',
+  'animate-pendulum-sway',
+  'animate-vertical-float',
+  'animate-diagonal-wander',
+  'animate-figure-eight',
+  'animate-lazy-spiral',
+  'animate-breath-drift',
+];
+
 interface GamePreloadProps {
   onEnter: () => void;
 }
@@ -18,6 +28,7 @@ interface Circle {
   id: string;
   position: Position;
   isStable: boolean;
+  animationType?: string;
 }
 
 const GamePreload = ({ onEnter }: GamePreloadProps) => {
@@ -35,7 +46,8 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
     return POSITIONS.map((position, i) => ({
       id: crypto.randomUUID(),
       position,
-      isStable: i === stableIndex
+      isStable: i === stableIndex,
+      animationType: i === stableIndex ? undefined : ANIMATION_TYPES[Math.floor(Math.random() * ANIMATION_TYPES.length)]
     }));
   }, []);
 
@@ -159,12 +171,12 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
           <button
             onClick={onEnter}
             className={cn(
-              "px-8 py-3 rounded-md bg-[hsl(270_25%_65%)] text-[hsl(270_20%_20%)]",
-              "transition-all duration-200",
+              "px-8 py-3 rounded-md bg-black text-white",
+              "transition-all duration-200 hover:bg-[hsl(0_0%_15%)]",
               "font-sans text-sm font-medium"
             )}
           >
-            Enter Site →
+            Get to Know Richard Graystone →
           </button>
         </div>
       )}
@@ -174,12 +186,12 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-[hsl(270_25%_65%)] text-[hsl(270_20%_20%)]",
-            "transition-all duration-200",
+            "px-8 py-3 rounded-md bg-black text-white",
+            "transition-all duration-200 hover:bg-[hsl(0_0%_15%)]",
             "font-sans text-sm font-medium animate-fade-in"
           )}
         >
-          Enter Site →
+          Get to Know Richard Graystone →
         </button>
       )}
 

@@ -98,13 +98,52 @@ export default {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
         },
-        // Micro orbital drift - very slow, subtle elliptical path
+        // Micro orbital drift - subtle elliptical path
         "orbital-drift": {
           "0%": { transform: "translate(0, 0)" },
-          "25%": { transform: "translate(3px, -2px)" },
-          "50%": { transform: "translate(0, -4px)" },
-          "75%": { transform: "translate(-3px, -2px)" },
+          "25%": { transform: "translate(4px, -3px)" },
+          "50%": { transform: "translate(0, -5px)" },
+          "75%": { transform: "translate(-4px, -3px)" },
           "100%": { transform: "translate(0, 0)" },
+        },
+        // Gentle horizontal swing
+        "pendulum-sway": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(5px)" },
+        },
+        // Soft vertical float
+        "vertical-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
+        },
+        // Diagonal diamond pattern
+        "diagonal-wander": {
+          "0%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(4px, -4px)" },
+          "50%": { transform: "translate(0, 0)" },
+          "75%": { transform: "translate(-4px, 4px)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
+        // Slow figure-8
+        "figure-eight": {
+          "0%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(4px, -3px)" },
+          "50%": { transform: "translate(0, 0)" },
+          "75%": { transform: "translate(-4px, 3px)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
+        // Spiral motion
+        "lazy-spiral": {
+          "0%": { transform: "translate(0, 0) rotate(0deg)" },
+          "25%": { transform: "translate(3px, -3px) rotate(2deg)" },
+          "50%": { transform: "translate(0, -4px) rotate(0deg)" },
+          "75%": { transform: "translate(-3px, -3px) rotate(-2deg)" },
+          "100%": { transform: "translate(0, 0) rotate(0deg)" },
+        },
+        // Breath-like subtle drift with scale
+        "breath-drift": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(2px, -3px) scale(1.02)" },
         },
       },
       animation: {
@@ -115,8 +154,14 @@ export default {
         "slide-up": "slide-up 0.6s ease-out forwards",
         "grow-width": "grow-width 0.8s ease-out forwards",
         "blink": "blink 1s step-end infinite",
-        // Slow orbital drift - 10s cycle for calm, meditative feel
-        "orbital-drift": "orbital-drift 10s ease-in-out infinite",
+        // Circle animations - 6-10s cycles for faster feel
+        "orbital-drift": "orbital-drift 8s ease-in-out infinite",
+        "pendulum-sway": "pendulum-sway 7s ease-in-out infinite",
+        "vertical-float": "vertical-float 6s ease-in-out infinite",
+        "diagonal-wander": "diagonal-wander 9s ease-in-out infinite",
+        "figure-eight": "figure-eight 8s ease-in-out infinite",
+        "lazy-spiral": "lazy-spiral 10s ease-in-out infinite",
+        "breath-drift": "breath-drift 7s ease-in-out infinite",
       },
     },
   },
