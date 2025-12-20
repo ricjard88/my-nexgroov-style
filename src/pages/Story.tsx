@@ -65,7 +65,7 @@ const Story = () => {
 
           <p>Outside the work, I spend time training my understanding of frequency. I do that with a combination of learning from my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.</p>
 
-          <p className="text-foreground font-medium">Thanks for coming to my Ted Talk…about me.</p>
+          <p className="text-foreground font-medium">Thanks for coming to my Ted Talk.</p>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border">
