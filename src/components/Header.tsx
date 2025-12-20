@@ -20,9 +20,9 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
       <div className="container max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="font-serif text-sm tracking-wide">
+        <Link to="/story" className="font-serif text-sm tracking-wide hover:text-primary transition-colors">
           Richard Graystone
-        </div>
+        </Link>
         
         <nav className="flex overflow-x-auto no-scrollbar items-center gap-4 md:gap-8">
       <Link to="/methodology">
