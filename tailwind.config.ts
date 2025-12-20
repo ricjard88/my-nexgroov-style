@@ -98,37 +98,13 @@ export default {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
         },
-        // Gentle rotation - smooth and slow
-        "tile-rotate": {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
-        },
-        // Dramatic scale - very visible pulsing
-        "tile-scale": {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(0.65)" },
-        },
-        // Glow pulse - much more visible glow
-        "tile-glow": {
-          "0%, 100%": { boxShadow: "0 0 12px 4px hsl(270 40% 65% / 0.5)" },
-          "50%": { boxShadow: "0 0 35px 12px hsl(270 40% 70% / 0.8)" },
-        },
-        // Visible drift - noticeable floating motion
-        "tile-drift": {
-          "0%, 100%": { transform: "translate(0, 0)" },
-          "25%": { transform: "translate(8px, -10px)" },
-          "50%": { transform: "translate(-8px, 8px)" },
-          "75%": { transform: "translate(10px, 4px)" },
-        },
-        // Visible sway - noticeable rotation wobble
-        "tile-sway": {
-          "0%, 100%": { transform: "rotate(-10deg)" },
-          "50%": { transform: "rotate(10deg)" },
-        },
-        // Breathe - combine scale with dramatic glow
-        "tile-breathe": {
-          "0%, 100%": { transform: "scale(1)", boxShadow: "0 0 10px 3px hsl(270 40% 65% / 0.4)" },
-          "50%": { transform: "scale(0.7)", boxShadow: "0 0 30px 10px hsl(270 40% 70% / 0.7)" },
+        // Micro orbital drift - very slow, subtle elliptical path
+        "orbital-drift": {
+          "0%": { transform: "translate(0, 0)" },
+          "25%": { transform: "translate(3px, -2px)" },
+          "50%": { transform: "translate(0, -4px)" },
+          "75%": { transform: "translate(-3px, -2px)" },
+          "100%": { transform: "translate(0, 0)" },
         },
       },
       animation: {
@@ -139,19 +115,8 @@ export default {
         "slide-up": "slide-up 0.6s ease-out forwards",
         "grow-width": "grow-width 0.8s ease-out forwards",
         "blink": "blink 1s step-end infinite",
-        // Slower, smoother animations
-        "tile-rotate": "tile-rotate 3s linear infinite",
-        "tile-rotate-fast": "tile-rotate 1.5s linear infinite",
-        "tile-scale": "tile-scale 2.5s ease-in-out infinite",
-        "tile-scale-fast": "tile-scale 1.2s ease-in-out infinite",
-        "tile-glow": "tile-glow 3s ease-in-out infinite",
-        "tile-glow-fast": "tile-glow 1.5s ease-in-out infinite",
-        "tile-drift": "tile-drift 3s ease-in-out infinite",
-        "tile-drift-fast": "tile-drift 1.5s ease-in-out infinite",
-        "tile-sway": "tile-sway 2.5s ease-in-out infinite",
-        "tile-sway-fast": "tile-sway 1.2s ease-in-out infinite",
-        "tile-breathe": "tile-breathe 3s ease-in-out infinite",
-        "tile-breathe-fast": "tile-breathe 1.5s ease-in-out infinite",
+        // Slow orbital drift - 10s cycle for calm, meditative feel
+        "orbital-drift": "orbital-drift 10s ease-in-out infinite",
       },
     },
   },
