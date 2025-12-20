@@ -18,7 +18,7 @@ const About = () => {
           <Card className="border border-border/30 bg-card card-hover">
             <CardContent className="p-5 md:p-6">
               <p className="text-muted-foreground font-sans leading-relaxed mb-4">
-                My depth is in the gap between intention and outcome.
+                I work in the space between strategy and execution, where smart plans meet reality and break.
               </p>
               
               <ul className="space-y-4 text-muted-foreground font-sans">

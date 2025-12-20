@@ -19,7 +19,7 @@ const Contact = () => {
           </p>
           
           <p className="mt-4 text-muted-foreground font-sans leading-relaxed">
-            Reach out to connect.
+            Reach out if this is you. Most problems clarify in one conversation. I take on 3–5 engagements per year.
           </p>
           
           <div className="mt-6">
