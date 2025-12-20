@@ -115,6 +115,11 @@
     scroll-behavior: smooth;
   }
 
+  /* Account for fixed header when scrolling to sections */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   body {
     @apply bg-background text-foreground font-sans antialiased;
     position: relative;
