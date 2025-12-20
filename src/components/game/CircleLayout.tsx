@@ -4,6 +4,7 @@ interface Circle {
   id: string;
   position: 'top' | 'bottom' | 'left' | 'right' | 'center';
   isStable: boolean;
+  animationType?: string;
 }
 
 interface CircleLayoutProps {
@@ -14,10 +15,10 @@ interface CircleLayoutProps {
 // Phase offsets for desync effect - each circle has different timing
 const PHASE_OFFSETS: Record<string, number> = {
   top: 0,
-  right: 2.5,
-  bottom: 5,
-  left: 7.5,
-  center: 10,
+  right: 1.5,
+  bottom: 3,
+  left: 4.5,
+  center: 6,
 };
 
 const CircleLayout = ({ circles, onCircleClick }: CircleLayoutProps) => {
@@ -37,6 +38,7 @@ const CircleLayout = ({ circles, onCircleClick }: CircleLayoutProps) => {
             <GameCircle
               isStable={circle.isStable}
               phaseOffset={PHASE_OFFSETS[circle.position]}
+              animationType={circle.animationType}
               onClick={() => onCircleClick(circle.position, circle.isStable)}
             />
           </div>

@@ -3,10 +3,11 @@ import { cn } from "@/lib/utils";
 interface GameCircleProps {
   isStable: boolean;
   phaseOffset: number;
+  animationType?: string;
   onClick: () => void;
 }
 
-const GameCircle = ({ isStable, phaseOffset, onClick }: GameCircleProps) => {
+const GameCircle = ({ isStable, phaseOffset, animationType, onClick }: GameCircleProps) => {
   return (
     <button
       onClick={onClick}
@@ -15,7 +16,7 @@ const GameCircle = ({ isStable, phaseOffset, onClick }: GameCircleProps) => {
         "bg-[hsl(270_25%_72%)]",
         "cursor-pointer",
         "focus:outline-none",
-        !isStable && "animate-orbital-drift"
+        !isStable && animationType
       )}
       style={{
         animationDelay: isStable ? undefined : `${phaseOffset}s`
