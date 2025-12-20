@@ -28,7 +28,7 @@ const Conditions = () => {
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-3 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
-                  <span>Authority exists to implement, not just recommend</span>
+                  <span>Authority exists to implement</span>
                 </li>
                 <li className={`flex items-start gap-3 scroll-hidden stagger-4 ${isVisible ? 'scroll-visible' : ''}`}>
                   <span className="text-accent-warm mt-1">—</span>
