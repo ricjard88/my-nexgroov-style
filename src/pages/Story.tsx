@@ -1,0 +1,109 @@
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const Story = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <div className="container max-w-3xl mx-auto px-4 py-12 md:py-20">
+        <Link 
+          to="/" 
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-12"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          <span className="font-sans text-sm">Back</span>
+        </Link>
+
+        <h1 className="font-serif text-3xl md:text-4xl font-medium text-foreground mb-12">
+          My Story So Far
+        </h1>
+
+        <div className="space-y-8 text-muted-foreground font-sans leading-relaxed">
+          <div className="space-y-4">
+            <p className="text-foreground font-medium">I didn't start at the top.</p>
+            <p>I started in the dirt. Literally.</p>
+            <p>A no name out of the way Midwest country town in Ohio.</p>
+            <p>Cut lawns and trees, moved mulch, dug holes.</p>
+            <p>By 18, I had 3 years of full-time work under my belt with only instinct and sheer wonder to guide me.</p>
+          </div>
+
+          <div className="border-l-2 border-border pl-6 space-y-4">
+            <p className="text-foreground font-medium">I dove deeper, looking for something interesting.</p>
+            <ul className="space-y-3">
+              <li>
+                <span className="text-foreground">Restaurants:</span> Worked from dish pits to service to a Chef to a GM, ultimately rebuilding a restaurant from scratch. Menu, equipment, operations to every thing you can think of.
+              </li>
+              <li>
+                <span className="text-foreground">In Capitol Hill:</span> Answered phones ringing with angry constituents.
+              </li>
+              <li>
+                <span className="text-foreground">Maryland Campaigns:</span> Knocked on doors setting state records for voting.
+              </li>
+            </ul>
+            <p>Studied theology and communications to understand marketing.</p>
+            <p>Became a tech bro in Silicon Valley to understand the potential for the future. Created systems for 8 then 11 figure businesses - and left them scaled, staffed, and stable.</p>
+          </div>
+
+          <div className="bg-card border border-border/30 rounded-lg p-6">
+            <p className="text-foreground italic">
+              Through all of this, I learned something simple:<br />
+              <span className="font-medium">Mastery is in the rhythm and that rhythm requires discernment through unconditional understanding.</span>
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <p>In kitchens, I've learned throughput and pressure.</p>
+            <p>In hospitality, I've learned emotion under constraints.</p>
+            <p>In politics, I've learned what power and persuasion actually do.</p>
+            <p>In startups, I've learned scale, debt, and consequences.</p>
+          </div>
+
+          <p className="text-foreground">
+            I advanced not just because I could talk well<br />
+            but because I showed up and could see what wasn't said and solved it.
+          </p>
+
+          <div className="space-y-4">
+            <p>Founded a company from zero, raised capital.</p>
+            <p>And experienced the pain of too much noise and lack of clarity.</p>
+          </div>
+
+          <p className="text-foreground font-medium text-lg">The advantage has always been curiosity.</p>
+
+          <div className="space-y-4">
+            <p>
+              Today, I design games and experiences to test and expand human capacity and connection with an amazing team (
+              <a 
+                href="https://www.nexgroov.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-foreground underline underline-offset-4 hover:text-primary transition-colors"
+              >
+                www.nexgroov.com
+              </a>
+              ).
+            </p>
+            <p>In parallel, I take on a small number of clients to solve problems that are strange enough to stretch the imagination and demand curious thinking.</p>
+          </div>
+
+          <p>
+            Outside the work, I spend my time training my understanding of frequency. I do that with a combination of chasing my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.
+          </p>
+
+          <p className="text-foreground font-medium pt-4">Thanks for coming to my Ted Talk!</p>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-border">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span className="font-sans text-sm">Back to home</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Story;

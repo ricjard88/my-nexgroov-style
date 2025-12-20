@@ -12,6 +12,7 @@ import BlogPostPage from "./pages/BlogPost";
 import AdminWrite from "./pages/AdminWrite";
 import NotFound from "./pages/NotFound";
 import GamePreload from "./pages/GamePreload";
+import Story from "./pages/Story";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/story" element={<Story />} />
               <Route path="/methodology" element={<MethodologyPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
