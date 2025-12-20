@@ -3,7 +3,6 @@ import CircleLayout from '@/components/game/CircleLayout';
 import TimerBar from '@/components/game/TimerBar';
 import { cn } from '@/lib/utils';
 
-const INITIAL_TIME = 25;
 const MAX_LEVEL = 11;
 const CAN_ENTER_FROM_LEVEL = 3;
 
@@ -46,13 +45,9 @@ interface Circle {
 
 const GamePreload = ({ onEnter }: GamePreloadProps) => {
   const [circles, setCircles] = useState<Circle[]>([]);
-  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
   const [level, setLevel] = useState(1);
   const [showIntro, setShowIntro] = useState(true);
-  const [hasInteracted, setHasInteracted] = useState(false);
-const [gameOver, setGameOver] = useState(false);
   const [encourageQuote, setEncourageQuote] = useState<string | null>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const quoteTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const generateCircles = useCallback((): Circle[] => {
@@ -73,30 +68,7 @@ const [gameOver, setGameOver] = useState(false);
     return () => clearTimeout(timer);
   }, [generateCircles]);
 
-  // Timer starts after first click
-  useEffect(() => {
-    if (!hasInteracted || gameOver) return;
-
-    timerRef.current = setInterval(() => {
-      setTimeLeft(t => {
-        if (t <= 0.1) {
-          if (timerRef.current) clearInterval(timerRef.current);
-          setGameOver(true);
-          return 0;
-        }
-        return t - 0.1;
-      });
-    }, 100);
-
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [hasInteracted, gameOver]);
-
-const handleCircleClick = (position: string, isStable: boolean) => {
-    if (gameOver) return;
-    if (!hasInteracted) setHasInteracted(true);
-    
+  const handleCircleClick = (position: string, isStable: boolean) => {
     if (!isStable) {
       // Show random encouraging quote
       if (quoteTimeoutRef.current) clearTimeout(quoteTimeoutRef.current);
@@ -109,28 +81,12 @@ const handleCircleClick = (position: string, isStable: boolean) => {
     const nextLevel = level + 1;
     
     if (nextLevel > MAX_LEVEL) {
-      if (timerRef.current) clearInterval(timerRef.current);
       setLevel(nextLevel);
       return;
     }
 
     setLevel(nextLevel);
-    
-    // Time bonus for completing a level
-    const timeBonus = Math.max(1, 4 - Math.floor(nextLevel / 3));
-    setTimeLeft(t => Math.min(t + timeBonus, INITIAL_TIME));
-    
     setCircles(generateCircles());
-  };
-
-const handleRestart = () => {
-    setCircles(generateCircles());
-    setTimeLeft(INITIAL_TIME);
-    setLevel(1);
-    setHasInteracted(false);
-    setGameOver(false);
-    setEncourageQuote(null);
-    if (quoteTimeoutRef.current) clearTimeout(quoteTimeoutRef.current);
   };
 
   const isComplete = level > MAX_LEVEL;
@@ -160,10 +116,10 @@ const handleRestart = () => {
         </div>
       )}
 
-      {/* Timer - hide when complete */}
+      {/* Progress bar - hide when complete */}
       {!isComplete && (
         <div className="w-full max-w-xs sm:max-w-sm mb-8 px-4">
-          <TimerBar timeLeft={timeLeft} maxTime={INITIAL_TIME} />
+          <TimerBar currentLevel={level} maxLevel={MAX_LEVEL} />
         </div>
       )}
 
@@ -180,26 +136,12 @@ const handleRestart = () => {
       {/* Level indicator - hide when complete */}
       {!isComplete && (
         <p className="text-[hsl(270_15%_50%)] text-sm mb-6">
-          {gameOver ? 'Time\'s up!' : `Level ${level} of ${MAX_LEVEL}`}
+          Level {level} of {MAX_LEVEL}
         </p>
       )}
 
-      {/* Game over - restart button */}
-      {gameOver && (
-        <button
-          onClick={handleRestart}
-          className={cn(
-            "px-6 py-3 rounded-md bg-[hsl(270_25%_72%)] text-[hsl(270_20%_25%)]",
-            "transition-all duration-200",
-            "font-sans text-sm animate-fade-in"
-          )}
-        >
-          Try Again
-        </button>
-      )}
-
       {/* Completion state */}
-      {isComplete && !gameOver && (
+      {isComplete && (
         <div className="flex flex-col items-center animate-fade-in">
           <p className="text-[hsl(270_15%_50%)] text-lg sm:text-xl mb-6 font-serif italic">
             Noise fades. Patterns remain.
@@ -207,7 +149,7 @@ const handleRestart = () => {
           <button
             onClick={onEnter}
             className={cn(
-              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-[hsl(45_90%_15%)]",
+              "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-white",
               "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
               "font-sans text-sm font-medium"
             )}
@@ -218,11 +160,11 @@ const handleRestart = () => {
       )}
 
       {/* Enter Site button - appears from level 3+ */}
-      {canEnterSite && !isComplete && !gameOver && (
+      {canEnterSite && !isComplete && (
         <button
           onClick={onEnter}
           className={cn(
-            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-[hsl(45_90%_15%)]",
+            "px-8 py-3 rounded-md bg-[hsl(45_90%_50%)] text-white",
             "transition-all duration-200 hover:bg-[hsl(45_90%_45%)]",
             "font-sans text-sm font-medium animate-fade-in"
           )}
@@ -232,7 +174,7 @@ const handleRestart = () => {
       )}
 
       {/* Skip option - only before level 3 */}
-      {!canEnterSite && !gameOver && (
+      {!canEnterSite && (
         <button
           onClick={onEnter}
           className="mt-8 text-[hsl(45_90%_40%)] text-xs transition-colors hover:text-[hsl(45_90%_35%)]"
