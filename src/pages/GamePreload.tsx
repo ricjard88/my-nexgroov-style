@@ -48,7 +48,7 @@ const GamePreload = ({ onEnter }: GamePreloadProps) => {
   const [level, setLevel] = useState(1);
   const [showIntro, setShowIntro] = useState(true);
   const [encourageQuote, setEncourageQuote] = useState<string | null>(null);
-  const quoteTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const quoteTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const generateCircles = useCallback((): Circle[] => {
     const stableIndex = Math.floor(Math.random() * POSITIONS.length);
