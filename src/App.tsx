@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,40 +10,11 @@ import BlogPage from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost";
 import AdminWrite from "./pages/AdminWrite";
 import NotFound from "./pages/NotFound";
-import GamePreload from "./pages/GamePreload";
 import Story from "./pages/Story";
 
 const queryClient = new QueryClient();
 
-const GAME_COMPLETED_KEY = 'game_preload_completed';
-
 const App = () => {
-  const [showGame, setShowGame] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const completed = localStorage.getItem(GAME_COMPLETED_KEY);
-    setShowGame(!completed);
-  }, []);
-
-  const handleGameComplete = () => {
-    localStorage.setItem(GAME_COMPLETED_KEY, 'true');
-    setShowGame(false);
-    window.scrollTo(0, 0);
-  };
-
-  // Loading state
-  if (showGame === null) {
-    return <div className="min-h-screen bg-background" />;
-  }
-
-  if (showGame) {
-    return (
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-        <GamePreload onEnter={handleGameComplete} />
-      </ThemeProvider>
-    );
-  }
-
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
