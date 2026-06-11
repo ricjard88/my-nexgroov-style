@@ -2,11 +2,6 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
-  const handleReplayIntro = () => {
-    localStorage.removeItem('game_preload_completed');
-    window.location.reload();
-  };
-
   return (
     <footer className="py-6 border-t border-border/40">
       <div className="container max-w-5xl mx-auto px-6">
@@ -19,14 +14,7 @@ const Footer = () => {
               Hard Problems
             </p>
           </div>
-          
-          <button
-            onClick={handleReplayIntro}
-            className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors"
-          >
-            Replay Intro
-          </button>
-          
+
           <div className="flex items-center gap-2">
             <p className="text-sm text-muted-foreground font-sans">
               Operating through Graystone Industries
