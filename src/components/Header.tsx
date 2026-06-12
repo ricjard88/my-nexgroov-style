@@ -1,21 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHomePage = location.pathname === "/";
-
-  const navigateToSection = (id: string) => {
-    if (isHomePage) {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate(`/#${id}`);
-    }
-  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
@@ -23,21 +12,15 @@ const Header = () => {
         <Link to="/story" className="font-serif text-sm tracking-wide hover:text-primary transition-colors">
           Richard Graystone
         </Link>
-        
-        <nav className="flex overflow-x-auto no-scrollbar items-center gap-4 md:gap-8">
-      <Link to="/methodology">
-        <Button variant="nav">Methodology</Button>
-      </Link>
-      <Button variant="nav" onClick={() => navigateToSection("conditions")}>
-        Conditions
-      </Button>
-      <Link to="/blog">
-        <Button variant="nav">Blog</Button>
-      </Link>
-      <Button variant="nav" onClick={() => navigateToSection("contact")}>
-        Contact
-      </Button>
-    </nav>
+
+        <nav className="flex items-center gap-4 md:gap-8">
+          <Link to="/">
+            <Button variant="nav">Main Page</Button>
+          </Link>
+          <Link to="/work">
+            <Button variant="nav">The Work</Button>
+          </Link>
+        </nav>
 
         <Button
           variant="ghost"
