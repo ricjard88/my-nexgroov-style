@@ -53,7 +53,7 @@ const Index = () => {
               Scaled a hardware ops team from 3 to 25 and grew revenue 700%. Reopened a bar that had been dark since COVID and grew sales 250%. Rebuilt a restaurant from a gutted kitchen — equipment, staff, vendors, all of it. Different rooms, same job: find what's broken, fix it, leave it running.
             </p>
             <p>
-              When a business makes real money but everything behind it is harder than it should be — that's my work.
+              When a business makes real money but everything behind it is harder than it should be that's where I support.
             </p>
             <p>
               This site is mostly my writing: real problems, how I thought through them, what worked. Read a few posts and you'll know how I work before we ever talk.
