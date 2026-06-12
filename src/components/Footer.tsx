@@ -20,6 +20,12 @@ const Footer = () => {
               Operating through Graystone Industries
             </p>
             <img src={logo} alt="Graystone Industries" className="h-5 w-5 opacity-70" />
+            <Link
+              to="/manage"
+              className="text-xs text-muted-foreground/50 font-sans hover:text-accent-warm transition-colors ml-2"
+            >
+              Admin
+            </Link>
           </div>
         </div>
       </div>
