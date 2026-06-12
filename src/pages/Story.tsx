@@ -50,22 +50,22 @@ const Story = () => {
           <p className="text-foreground font-medium">The advantage has always been curiosity.</p>
 
           <p>
-            Today, I design games and experiences to test and expand human capacity and connection with an amazing team (
+            Today, I design systems and experiences to test and expand human capacity and connection with an amazing team (
             <a 
-              href="https://www.nexgroov.com" 
+              href="https://www.kabifi.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground underline underline-offset-4 hover:text-primary transition-colors"
             >
-              www.nexgroov.com
+              www.kabifi.com
             </a>
             ).
           </p>
-          <p>In parallel, I take on a small number of clients to solve problems that are strange enough to stretch the imagination and demand curious thinking.</p>
+          <p>In parallel, I do take on a small number of clients to solve problems that are strange enough to stretch the imagination and demand curious thinking.</p>
 
           <p>Outside the work, I spend time training my understanding of frequency. I do that with a combination of learning from my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.</p>
 
-          <p className="text-foreground font-medium">Thanks for coming to my Ted Talk.</p>
+          <p className="text-foreground font-medium"><br /></p>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border">
