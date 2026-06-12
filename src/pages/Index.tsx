@@ -50,13 +50,16 @@ const Index = () => {
             className={`space-y-5 text-muted-foreground font-sans leading-relaxed scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
           >
             <p>
-              Scaled a hardware ops team from 3 to 25 and grew revenue 700%. Reopened a bar that had been dark since COVID and grew sales 250%. Rebuilt a restaurant from a gutted kitchen — equipment, staff, vendors, all of it. Different rooms, same job: find what's broken, fix it, leave it running.
+              I've been fortunate to be a part of extremely successful teams and extremely unsuccessful ones.
             </p>
             <p>
-              When a business makes real money but everything behind it is harder than it should be that's where I support.
+              One thing I've learned is that the best systems are the ones that are the simplest. Thought simple doesn't mean easy...
             </p>
             <p>
-              This site is mostly my writing: real problems, how I thought through them, what worked. Read a few posts and you'll know how I work before we ever talk.
+              When a business makes real money but everything behind it is harder than it should be that's where I come in.
+            </p>
+            <p>
+              This site is mostly my writing: real problems, how I thought through them, what worked. Read a few posts and you'll know how I work.
             </p>
           </section>
 
