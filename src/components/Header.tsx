@@ -20,6 +20,9 @@ const Header = () => {
           <Link to="/work">
             <Button variant="nav">The Work</Button>
           </Link>
+          <Link to="/blog">
+            <Button variant="nav">Blog</Button>
+          </Link>
         </nav>
 
         <Button
