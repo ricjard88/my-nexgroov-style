@@ -53,7 +53,7 @@ const Index = () => {
               I've been fortunate to be a part of extremely successful teams and extremely unsuccessful ones.
             </p>
             <p>
-              One thing I've learned is that the best systems are the ones that are the simplest. Thought simple doesn't mean easy...
+              One thing I've learned is that the best systems are the ones that are the simplest. Though simple doesn't mean easy...
             </p>
             <p>
               When a business makes real money but everything behind it is harder than it should be that's where I come in.
