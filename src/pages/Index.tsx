@@ -40,7 +40,7 @@ const Index = () => {
         <div className="container max-w-3xl mx-auto px-6">
           <section className="mb-10">
             <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-serif leading-tight tracking-tight text-foreground">
-              I create long term operational systems.
+              Creating long term operational systems.
             </h1>
             <div className="mt-6 h-0.5 bg-accent-warm max-w-xs" />
           </section>
