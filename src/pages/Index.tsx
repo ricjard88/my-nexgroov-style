@@ -62,7 +62,7 @@ const Index = () => {
               One thing I've learned is that the best systems are the ones that have the simplest levers. Though simple doesn't mean easy...
             </p>
             <p>
-              When a business makes real money but everything behind it is harder than it should be that's&nbsp;
+              <br />
             </p>
             <p>
               I've always been attracted to challenges, you can say I'm a lover of the game. The aim is to learn how to do the least for the most amount of sustainable impact.
