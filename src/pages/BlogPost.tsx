@@ -58,8 +58,18 @@ const BlogPostPage = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const excerpt = post?.content
+    ? post.content.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim().slice(0, 155)
+    : "";
+
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title={post ? `${post.title} — Richard Graystone` : "Blog — Richard Graystone"}
+        description={excerpt || "Essays and notes on operations, systems and getting things done."}
+        path={`/blog/${slug ?? ""}`}
+        type="article"
+      />
       <Header />
       <main className="pt-24 pb-12">
         <div className="container max-w-3xl mx-auto px-6">
