@@ -56,7 +56,7 @@ const Index = () => {
             className={`space-y-5 text-muted-foreground font-sans leading-relaxed scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
           >
             <p>
-              I've been fortunate to be a part of amazingly successful teams and amazing unsuccessful ones.
+              I've been fortunate to be a part of amazingly successful teams and amazingly unsuccessful ones.
             </p>
             <p>
               One thing I've learned is that the best systems are the ones that have the simplest levers. Though simple doesn't mean easy...
