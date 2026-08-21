@@ -40,7 +40,7 @@ const Index = () => {
         <div className="container max-w-3xl mx-auto px-6">
           <section className="mb-10">
             <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-serif leading-tight tracking-tight text-foreground">
-              Creating long term operational systems.
+              operational systems to create value.
             </h1>
             <div className="mt-6 h-0.5 bg-accent-warm max-w-xs" />
           </section>
@@ -50,16 +50,19 @@ const Index = () => {
             className={`space-y-5 text-muted-foreground font-sans leading-relaxed scroll-hidden ${isVisible ? 'scroll-visible' : ''}`}
           >
             <p>
-              I've been fortunate to be a part of extremely successful teams and extremely unsuccessful ones.
+              I've been fortunate to be a part of amazingly successful teams and amazing unsuccessful ones.
             </p>
             <p>
-              One thing I've learned is that the best systems are the ones that are the simplest. Though simple doesn't mean easy...
+              One thing I've learned is that the best systems are the ones that have the simplest levers. Though simple doesn't mean easy...
             </p>
             <p>
-              When a business makes real money but everything behind it is harder than it should be that's where I come in.
+              When a business makes real money but everything behind it is harder than it should be that's&nbsp;
             </p>
             <p>
-              This site is mostly my writing: real problems, how I thought through them, what worked. Read a few posts and you'll know how I work.
+              I've always been attracted to challenges, you can say I'm a lover of the game. The aim is to learn how to do the least for the most amount of sustainable impact.
+            </p>
+            <p>
+              This site is mostly my random thoughts as well as some perspectives on some problems, how I thought through them, what worked, what didn't work, etc.&nbsp;
             </p>
           </section>
 
