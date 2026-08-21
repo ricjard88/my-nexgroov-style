@@ -16,7 +16,7 @@ const Story = () => {
         <header className="mb-16 md:mb-20">
           <div className="flex items-center gap-3 mb-6">
             <div className="h-px w-8 bg-accent-warm/40" />
-            <span className="text-[10px] font-semibold tracking-[0.2em] text-accent-warm uppercase">Personal Narrative</span>
+            <span className="text-[10px] font-semibold tracking-[0.2em] text-accent-warm uppercase">SO WHO IS THIS DUDE?</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-normal text-foreground tracking-tight leading-[1.1] mb-4">
             My Story So Far
