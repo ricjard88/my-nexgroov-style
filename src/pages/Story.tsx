@@ -18,16 +18,23 @@ const Story = () => {
         </h1>
 
         <div className="space-y-6 text-muted-foreground font-sans leading-relaxed">
-          <p className="text-foreground font-medium">I didn't start at the top.</p>
-          <p>I started in the dirt. Literally.</p>
-          <p>A no name out of the way Midwest country town in Ohio.</p>
-          <p>Cut lawns and trees, moved mulch, dug holes.</p>
-          <p>By 18, I had 3 years of full-time work under my belt with only instinct and sheer wonder to guide me.</p>
+          <p className="text-foreground font-medium">I didn't start at the top nor with any accolades or big names behind my existence. </p>
+          <p>
+            I come from proud hard working people who moved a lot to ensure I could have the opportunity to see beyond what they knew. My mother was a teacher who laid a strict foundation for both the appreciation and focus required to learn something. 
 
-          <p className="text-foreground font-medium">I dove deeper, looking for something interesting.</p>
-          <p><span className="text-foreground">Restaurants:</span> Worked from dish pits to service to a Chef to a GM, ultimately rebuilding a restaurant from scratch. Menu, equipment, operations to every thing you can think of.</p>
-          <p><span className="text-foreground">In Capitol Hill:</span> Answered phones ringing with angry constituents.</p>
-          <p><span className="text-foreground">Maryland Campaigns:</span> Knocked on doors setting state records for voting.</p>
+            My first job, I started in the dirt.
+
+            Raking, mowing, mulching, planting and getting berated (for my own good lol) by oldschool business guys. Who taught me about such things like looking at a man in his eye, shaking hands, working hard, not asking questions but getting it done. Needless to say I had a lot of training at an early age thanks to a mom who wanted her son to learn from all the people she could find who did great things.
+          </p>
+          <p>By 18 I had 3 years doing real work and labor with only my instincts and sheer wonder to guide that aim. Though a no name kid out of a Midwest country town in Ohio, I had big plans to learn as much as possible. </p>
+          <p><br /></p>
+          <p><br /></p>
+
+          <p className="text-foreground font-medium">Over the next 15 years I dove deeper, looking for challenges that could inform my ultimate goal to produce value consistently.</p>
+          <p>
+            <span className="text-foreground">i started my journey in restaurants:</span> Not that nice go lucky shit you see on t.v. no raw, rough and direct. No place to hide and the only way to survive was to get to it and not be left behind. I had the privilege to work in dish pits to ultimately finding myself becoming a chef to a general manager. I was fortunate to work at many mom and pops and many early restaurants like sweetgreen, earls kitchen and bar and a few others. I'll drop Market 65 because I have Pat and T to thank for pushing me to open up my view of my own potential. I had found that my interest went not just from the prepping and cooking of the food but to the serving as well and that was the first seed of my interest in the word operations.
+          </p>
+          <p><span className="text-foreground">At the behest of a strong menton Capitol Hill:</span> Answered phones ringing with angry constituents.</p>
           <p>Studied theology and communications to understand marketing.</p>
           <p>Became a tech bro in Silicon Valley to understand the potential for the future. Created systems for 8 then 11 figure businesses - and left them scaled, staffed, and stable.</p>
 
