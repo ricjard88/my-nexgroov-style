@@ -5,6 +5,12 @@ import Seo from "@/components/Seo";
 const Story = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="My Story So Far — Richard Graystone"
+        description="From an Ohio country town to kitchens, Capitol Hill and Silicon Valley — the path that taught me mastery is in the rhythm."
+        path="/story"
+        type="article"
+      />
       <div className="container max-w-[44rem] mx-auto px-5 sm:px-6 py-12 md:py-20">
         <Link 
           to="/" 

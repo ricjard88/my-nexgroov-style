@@ -36,6 +36,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Richard Graystone — Getting it done."
+        description="Personal writing on operational systems: real problems, how I thought through them, what worked and what didn't."
+        path="/"
+      />
       <Header />
       <main className="pt-24 pb-16">
         <div className="container max-w-3xl mx-auto px-6">
