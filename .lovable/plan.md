@@ -1,16 +1,14 @@
-## Goal
-Make the blog admin easy to reach, and reset the forgotten admin password.
+# Reset the blog admin password
 
-## Changes
+You log in to the blog editor at `/manage`. The password lives in the encrypted secret store as `ADMIN_PASSWORD`, and stored secrets can never be read back — not by you in chat, not by me. The only way forward is to set a new one.
 
-1. **Add subtle "Admin" link in the footer of the main page**
-   - Edit `src/pages/Index.tsx` to add a small, muted "Admin" link in the footer area pointing to `/manage`.
-   - Style: tiny, low-contrast text using existing muted token — fits the minimalist aesthetic, easy to miss for visitors but findable for you.
+## What happens
 
-2. **Reset the `ADMIN_PASSWORD` secret**
-   - Trigger the secure secret-update form for `ADMIN_PASSWORD` so you can type a new password directly. The new value takes effect immediately for the `/manage` login.
+1. A secure form opens in the chat for `ADMIN_PASSWORD`. You type the new password there; the value goes straight to the encrypted store and never passes through the conversation.
+2. The password check runs in the backend function that gates the editor, so the new value takes effect on the next login attempt — no code changes needed.
+3. Go to `/manage`, enter the new password, and write posts as usual.
 
-## How to use after
-- Click "Admin" in the footer → enter your new password → write/publish posts.
+## Notes
 
-No other files or behavior change.
+- Pick something you'll remember or store it in a password manager; the same "can't read it back" rule applies to every future reset.
+- No files change in this plan; the only action is the secret update.
