@@ -18,70 +18,48 @@ const Story = () => {
         </h1>
 
         <div className="space-y-6 text-muted-foreground font-sans leading-relaxed">
-          <p className="text-foreground font-medium">I didn't start at the top nor with any accolades or big names behind my existence. </p>
           <p>
-            I come from proud hard working people who moved a lot to ensure I could have the opportunity to see beyond what they knew. My mother was a teacher who laid a strict foundation for both the appreciation and focus required to learn something. 
-
-            My first job, I started in the dirt.
-
-            Raking, mowing, mulching, planting and getting berated (for my own good lol) by oldschool business guys. Who taught me about such things like looking at a man in his eye, shaking hands, working hard, not asking questions but getting it done. Needless to say I had a lot of training at an early age thanks to a mom who wanted her son to learn from all the people she could find who did great things.
+            I didn't start at the top nor with any accolades or big names behind my existence.
+            I come from proud hard working people who moved a lot to ensure I could have the opportunity to see beyond what they knew. My mother was a teacher who laid a strict foundation for both the appreciation and focus required to learn something. My first job, I started in the dirt. Raking, mowing, mulching, planting and getting berated (for my own good lol) by oldschool business guys. Who taught me about such things like looking at a man in his eye, shaking hands, working hard, not asking questions but getting it done. Needless to say I had a lot of training at an early age thanks to a mom who wanted her son to learn from all the people she could find who did great things.
+            By 18 I had 3 years doing real work and labor with only my instincts and sheer wonder to guide that aim. Though a no name kid out of a Midwest country town in Ohio, I had big plans to learn as much as possible.
           </p>
-          <p>By 18 I had 3 years doing real work and labor with only my instincts and sheer wonder to guide that aim. Though a no name kid out of a Midwest country town in Ohio, I had big plans to learn as much as possible. </p>
-          <p><br /></p>
-          <p><br /></p>
 
-          <p className="text-foreground font-medium">Over the next 15 years I dove deeper, looking for challenges that could inform my ultimate goal to produce value consistently.</p>
+          <p>Over the next 15 years I dove deeper, looking for challenges that could inform my ultimate goal to produce value consistently.</p>
+
           <p>
-            <span className="text-foreground">i started my journey in restaurants:</span> Not that nice go lucky shit you see on t.v. No, the raw, rough and direct world that was as close to pirate ships as one can get. The only rule was to not punk out. No place to hide and the only way to survive was to get to it and not be left behind. I had the privilege to work in dish pits to ultimately finding myself becoming a chef to a general manager. I was fortunate to work at many mom and pops and many early restaurants like sweetgreen, earls kitchen and bar and a few others. I'll drop Market 65 because I have Pat and T to thank for pushing me to open up my view of my own potential. I had found that my interest went not just from the prepping and cooking of the food but to the serving as well and that was the first seed of my interest in the word operations.
-          </p>
-          <p>
+            i started my journey in restaurants: Not that nice go lucky shit you see on t.v. No, the raw, rough and direct world that was as close to pirate ships as one can get. The only rule was to not punk out. No place to hide and the only way to survive was to get to it and not be left behind. I had the privilege to work in dish pits to ultimately finding myself becoming a chef to a general manager. I was fortunate to work at many mom and pops and many early restaurants like sweetgreen, earls kitchen and bar and a few others. I'll drop Market 65 because I have Pat and T to thank for pushing me to open up my view of my own potential. I had found that my interest went not just from the prepping and cooking of the food but to the serving as well and that was the first seed of my interest in the word operations.
             I had left home for a bit to study theology and I just couldn't get past the amount of ego attached to my peers and figured I missed the honesty of the kitchens. At the encouragement of my M65 crew, I decided to go back to school. I moved to D.C. with one dream: to open a hotdog stand that served regular hotdogs and veggie hot dogs. That dream lasted all of 2 months as I realized that I did not like food trucks. Enter, Capitol Hill. I was in school for psychology and communications which demanded we do an internship. I was one of the lucky interns that got to work on Capitol Hill in Senator Browns office. My duties? Answer the phones when constituents call and give people tours of the Capitol if they showed up unannounced but mainly the phones. I was still in the midst of my hotdog dreams. I remember the Senator sat down with the interns and asked us what we wanted to be, everyone said judge or lawyer all with very clear ladders of why they were there. My answer? Hot dogs baby! Needless to say I was shunned by my peers after that. Theres a whole arc of 3 years where I worked in Maryland politics and ran a campaign and set records but needless to say I did the political thing and came back to kitchens because I appreciated the simplicity of a meal.
-            <br /><br />
+          </p>
+
+          <p>
             So all gungho I left the suit and tie world and came back to my roots. I became what they call a Saucier or a Sauce god. Meaning I'm busting out sauces like a maniac, I loved it. I loved it so much I took another job in kitchens just to grow my skills. Like in the past I found myself on the management track and management at that time was chill because I had a bit more control of the environment. Where am I going with this? Oh yeah, I was in bliss but also wanted to open my own space (remember the hot dogs) anyways, I go the opportunity to open a restaurant, my big dream, I had finally reached the pinnacle of the training, the hard years, the mopping, the dish washing, the hours standing on my feet. To commemorate the occasion I even got a special jacket made just for me with my name and the title. I had thought I had hit the jackpot. It was a small co-op that the restaurant was located in that was owned by someone for 25 years and they had brought me in to run my own kitchen. Needless to say a lot of things went very left, I could blame a lot of elements but ultimately I was responsible for it and I did my absolute best but I just didn't have the experience to deal with a community that had a lot of opinions, instead of sticking to what I knew I yes manned things believing I could be Hercules and get it all done, which I did, but my health (95 hour weeks) and my temperament both took turns in the wrong direction. That lack of rest coupled with the space proved to be an incompatible paring. I was fired unceremoniously. One of my hero's Homaro Cantu, as well as Anthony Bourdain had eliminated their lives and for the first time I felt like I needed to be open to something outside of restaurants.
           </p>
+
           <p>
             So what does one do? I had met a beautiful woman from California who told me I should try it out. I had been lucky to have a best bud from highschool who let me stay in his spare bedroom in Vallejo. Now, I didn't know anything about Silicon Valley, funny enough I had actually got a job with Sweetgreen but got fired after I was in training in D.C. (My first stint there I had told the district manager I wouldn't shake his hand because I didn't respect him before I quit) needless to say he rose in rank and saw me working in one of his stores training… I was on a plane back home 24 hours later. Fired 2x in a year having never been fired before with no idea what to do. So I started to explore and got an interview with some random small tech company called Piazza. Having zero idea what tech was or even the cultured I was amazed by how fast and intense the interview process was. There I was mentored by folks who were a part of companies I would learn were no small deal such as Palantir and Youtube. Here I grew, I threw myself at the problems for years and earned a clear understanding at building at scale.
             <br /><br />
-            After a while tragedy struck and I took time off to just breathe. That took 2 years, then I reopened a bar, reopened a restaurant, built and grew a coffee company. Then came on as employee #3 to a tech/hardware company supporting a company with a market cap of 18.4b where I was given full cart blanche to get it all done and made a significant leap both in the learning as well as the rewards. Running that company, building the team, let me know that I could build an organization.
+            After a while tragedy struck and I took time off to just breathe. That took 2 years, then I reopened a bar, reopened a restaurant, built and grew a coffee company. Then came on as employee #3 to a tech/hardware company that was commissioned to support two companies, one of those companies which had a market cap of 18.4b. Here I was given full cart blanche to get it all done and made a significant leap both in the learning as well as the rewards. Running that company, building the team, let me know that I could build an organization and not only that but a culture that could stick. All of those places I had found the key to the kind of culture in which I believe is best for growth.&nbsp;
             <br /><br />
-            Then I spent the next 4 years running experiments by creating a bunch of different businesses, all great concepts but lacking backbone to stick through. Being bootstrapped didn't help but I believe that that's never really the main problem. That beings said I did A LOT of experiments and did not create boundaries around that exploration. Over time I began to help other businesses with their problems and
+            Then I spent the next 4 years running experiments by creating a bunch of different businesses, all great concepts but lacking the backbone to stick through. I guess I was more concerned with the learning, being bootstrapped didn't help but I believe that that's never really the main problem. That beings said, I did A LOT of experiments and did not create boundaries around that exploration. Over time I began to help other businesses with their problems and realized I had a gift of multiplying revenue via creating operational systems based on the resources (mainly people) that the companies had.&nbsp;
           </p>
 
-          <p className="text-foreground font-medium italic">
-            Through all of this, I learned something simple: Mastery is in the rhythm and that rhythm requires discernment through unconditional understanding.
-          </p>
+          <p>Through all of this, I learned something simple: Mastery is in the rhythm and that rhythm requires discernment through unconditional understanding.</p>
 
-          <p>In kitchens, I've learned throughput and pressure.</p>
-          <p>In hospitality, I've learned emotion under constraints.</p>
-          <p>In politics, I've learned what power and persuasion actually do.</p>
-          <p>In startups, I've learned scale, debt, and consequences.</p>
+          <p>In kitchens, I learned throughput and pressure.</p>
+          <p>In hospitality, I learned emotion under constraints.</p>
+          <p>In politics, I learned what power and persuasion actually do.</p>
+          <p>In startups, I learned scale, debt, and consequences.</p>
 
-          <p className="text-foreground font-medium">
-            I advance not just because I speak well but because I show up and see what isn't working and what can work.
-          </p>
+          <p>&nbsp;</p>
 
-          <p>Founded a company from zero, raised capital.</p>
-          <p>And experienced the pain of too much noise and lack of clarity.</p>
-
-          <p className="text-foreground font-medium">The advantage has always been curiosity.</p>
-
-          <p>
-            Today, I design systems and experiences to test and expand human capacity and connection with an amazing team (
-            <a 
-              href="https://www.kabifi.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-foreground underline underline-offset-4 hover:text-primary transition-colors"
-            >
-              www.kabifi.com
-            </a>
-            ).
-          </p>
-          <p>In parallel, I do take on a small number of clients to solve problems that are strange enough to stretch the imagination and demand curious thinking.</p>
-
-          <p>Outside the work, I spend time training my understanding of frequency. I do that with a combination of learning from my kids, Dj'ing in the city, watching anime, billiards, making eyeglasses and a lot of nature walks.</p>
-
-          <p className="text-foreground font-medium"><br /></p>
+          <p>&nbsp;</p>
+          <p>I've experienced the pain of too much noise and lack of clarity.</p>
+          <p>There's a lot more to the story but the advantage has always been curiosity.</p>
+          <p>Today, I mainly design systems and experiences to enhance companies operations and revenue.&nbsp;</p>
+          <p>I also on the rare occasion will work with leaders to solve problems that are strange enough to stretch the imagination and demand genuine growth.</p>
+          <p>Outside the work, I spend time training my understanding. I do that with a combination of learning from my kids, Dj'ing in the city, watching anime, reading and a lot of nature walks.</p>
+          <p>Thanks for reading, I hope this gave you a bit more insight about me and a bit more background around who I am.&nbsp;</p>
+          <p>Forward Ever.</p>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border">
