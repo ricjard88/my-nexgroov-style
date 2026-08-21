@@ -3,12 +3,18 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import Seo from "@/components/Seo";
 
 const Work = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="The Work — Richard Graystone"
+        description="I take a small number of clients and embed in the operation: removing bottlenecks, simplifying levers, multiplying return."
+        path="/work"
+      />
       <Header />
       <main className="pt-24 pb-12">
         <div className="container max-w-3xl mx-auto px-6">

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import Seo from "@/components/Seo";
 
 interface BlogPost {
   id: string;
@@ -36,6 +37,11 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Blog — Richard Graystone"
+        description="Essays and notes on operations, systems and the messy work of making businesses run without you."
+        path="/blog"
+      />
       <Header />
       <main className="pt-24 pb-12">
         <div className="container max-w-5xl mx-auto px-6">
