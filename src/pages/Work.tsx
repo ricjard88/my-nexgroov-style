@@ -30,17 +30,17 @@ const Work = () => {
 
             <div className="space-y-5 text-muted-foreground font-sans leading-relaxed">
               <p>
-                I take a small number of clients and embed in the operation. Not advice from the outside — inside, with the team, until it runs.
+                I try to find problems that can create a win-win scenario so here's some things I try to get on the table if there was to be any kind of forward motion...
               </p>
 
-              <p className="text-foreground font-medium pt-2">It's a fit if:</p>
+              <p className="text-foreground font-medium pt-2 whitespace-pre-line">{"\n"}</p>
 
               <ul className="space-y-3">
                 {[
-                  "The revenue is real and operations are the bottleneck",
-                  "You want the problem fixed, not managed",
-                  "I have the authority to actually change things",
-                  "You're thinking in months, not years",
+                  "Your product is \"gold\", meaning that there's something uniquely valuable about it that you'v been able to prove to both yourself and others.",
+                  "You want the problem fixed, and you understand that you don't necessarily know how.",
+                  "You're comfortable letting go because you trust what you created.",
+                  "You're not afraid of hard conversations\u00A0",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="text-accent-warm mt-1">—</span>
@@ -50,8 +50,7 @@ const Work = () => {
               </ul>
 
               <p className="pt-4">
-                <span className="text-foreground font-medium">How it goes:</span>{" "}
-                First conversation is free and usually clarifies the problem on its own. If we work together, we define what success looks like before we start. I stay until the system runs without me — sometimes 90 days, sometimes a year — then I support as needed.
+                I have things I'm internally I'm looking for but my main aim when working with anyone is can I help this person by removing bottlenecks in their business in order to multiply return. I like to say I'm a multiplier so at least for now, as long as you have something I can build it, if your still figuring it out it's a bit too early because the space for experimentation is vast and you're responsible for the anchoring.{"\u00A0"}
               </p>
 
               <p className="pt-4">
