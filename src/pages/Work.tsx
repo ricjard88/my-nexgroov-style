@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import Seo from "@/components/Seo";
 
 const Work = () => {
   const { ref, isVisible } = useScrollAnimation();
